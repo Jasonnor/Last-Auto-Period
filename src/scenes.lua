@@ -17,27 +17,27 @@ function helperSelect()
 	i = 0
 	repeat
 		if i > 0 and i % 2 == 0 then
-			--Refresh
+			-- Refresh
 			x = 675
 			y = 1238
 			tap(x, y)
 			mSleep(1500)
 		end
-		--ScrollDown
+		-- ScrollDown
 		touchDown(1, 709, 331)
 		mSleep(50)
 		touchMove(1, 709, 1145)
 		mSleep(50)
 		touchUp(1, 709, 1145)
 		mSleep(1000)
-		--Find Char
+		-- Find Char
 		x, y = findColor({13, 288, 186, 1192}, 
 			"0|0|0xe675b5,-62|-38|0xffef67,-26|-37|0x593242,-3|-50|0x57516b,15|-53|0x453518,21|-53|0xfff167,35|-56|0x7d6d2a,-52|21|0x9c8b8d,-54|40|0xffc850,-35|47|0xb58c39,-20|42|0x4a2323,1|43|0xecb94a,12|42|0xffc850,20|43|0x84652a,26|19|0x3f3111,-1|14|0xffe3cc,-33|24|0x8f7676",
 			90, 0, 0, 0)
 		i = i + 1
 	until x > -1
 	tap(x, y)
-	--MissionStart
+	-- MissionStart
 	repeat
 		mSleep(1000)
 		x, y = findColor({218, 977, 498, 1042}, 
@@ -49,7 +49,7 @@ end
 
 function battle()
 	sysLog("In Battle");
-	--Quest Clear
+	-- Quest Clear
 	repeat
 		mSleep(3000)
 		x, y = findColor({116, 383, 583, 484}, 
@@ -57,7 +57,7 @@ function battle()
 			90, 0, 0, 0)
 	until x > -1
 	tap(x, y)
-	--Result
+	-- Result
 	repeat
 		mSleep(1000)
 		x, y = findColor({67, 215, 415, 408}, 
@@ -69,7 +69,7 @@ function battle()
 	tap(x, y)
 	mSleep(1000)
 	tap(x, y)
-	--Add Friend?
+	-- Add Friend?
 	repeat
 		mSleep(1000)
 		x, y = findColor({34, 435, 704, 857}, 
@@ -77,7 +77,7 @@ function battle()
 			90, 0, 0, 0)
 	until x > -1
 	tap(x, y)
-	--OK
+	-- OK
 	repeat
 		mSleep(1000)
 		x, y = findColor({71, 443, 645, 841}, 
@@ -85,7 +85,7 @@ function battle()
 			90, 0, 0, 0)
 	until x > -1
 	tap(x, y)
-	--OK2
+	-- OK2
 	repeat
 		mSleep(1000)
 		x, y = findColor({373, 1166, 691, 1258}, 

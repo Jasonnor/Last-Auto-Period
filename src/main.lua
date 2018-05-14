@@ -12,8 +12,7 @@ x, y = findColor({182, 1024, 529, 1087},
 	"0|0|0xeef2f9,-294|-102|0xc59861,19|1|0x4d3e31,40|-1|0x9c99a7",
 	90, 1, 1, 1)
 if x > -1 then
-	touchDown(1, x, y);
-	touchUp(1, x, y);
+	tap(x, y)
 else
 	sysLog("Game Already Started");
 end
