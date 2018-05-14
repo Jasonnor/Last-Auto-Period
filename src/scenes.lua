@@ -23,12 +23,7 @@ function helperSelect()
 			tap(x, y)
 			mSleep(1500)
 		end
-		-- ScrollDown
-		touchDown(1, 709, 331)
-		mSleep(50)
-		touchMove(1, 709, 1145)
-		mSleep(50)
-		touchUp(1, 709, 1145)
+		drag(709, 331, 709, 1145)
 		mSleep(1000)
 		-- Find Char
 		x, y = findColor({13, 288, 186, 1192}, 
