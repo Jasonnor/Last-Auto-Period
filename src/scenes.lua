@@ -44,14 +44,34 @@ end
 
 function battle()
 	sysLog("In Battle");
-	-- Quest Clear
-	repeat
-		ramdomSleep(3000)
+	while true do
+		-- Attack
+		repeat
+			-- Skill detect
+			x, y = findColor({597, 1224, 709, 1264}, 
+				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
+				85, 0, 0, 0)
+			if x > -1 then
+				tap(664, 1188)
+				mSleep(3496)
+			else
+				tap(363, 1139)
+				mSleep(1658)
+			end
+			x, y = findColor({171, 1061, 542, 1273}, 
+				"0|0|0x332c1b,19|-1|0x3d2a1a,51|-1|0xa07d49,104|-1|0xb99755,171|0|0x332e20,209|6|0x333322,207|30|0xbb9958,102|27|0xb18c55,8|27|0xac834e",
+				90, 0, 0, 0)
+		until x <= -1
+		ramdomSleep(500)
+		-- Quest Clear
 		x, y = findColor({116, 383, 583, 484}, 
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
 			90, 0, 0, 0)
-	until x > -1
-	tap(x, y)
+		if x > -1 then
+			tap(x, y)
+			break
+		end
+	end
 	-- Result
 	repeat
 		ramdomSleep(1000)
@@ -59,6 +79,8 @@ function battle()
 			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
 			90, 0, 0, 0)
 	until x > -1
+	tap(x, y)
+	ramdomSleep(1000)
 	tap(x, y)
 	ramdomSleep(1000)
 	tap(x, y)
