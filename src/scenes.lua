@@ -47,8 +47,11 @@ function battle()
 	while true do
 		-- Attack
 		repeat
+			-- Overkill detect
+			--x, y = findColor({424, 253, 708, 337}, "0|0|0xffb33e,32|-1|0x980000,36|-1|0xff9821,56|3|0xff7c02,66|15|0xffba2b,73|0|0xffa92d,94|-6|0xffb63f,118|4|0xffeb1b,164|0|0xffa000,213|-23|0xff2c0c,210|-3|0xff9000,242|28|0x630800,249|6|0xfdd34b,111|-12|0x950000",85, 0, 0, 0)
 			-- Use power up
 			tap(56, 1022)
+			mSleep(10)
 			-- Skill detect
 			x, y = findColor({597, 1224, 709, 1264}, 
 				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
@@ -66,11 +69,11 @@ function battle()
 				90, 0, 0, 0)
 		until x <= -1
 		-- Defense detect
-		x, y = findColor({230, 1070, 486, 1254}, 
-			"0|0|0xbf2222,114|9|0xee8989,229|24|0xdd2222,36|107|0xae8855,131|105|0xc9a968,225|108|0xb4ad9c,277|45|0xee3333,-47|34|0xdd2222",
+		x, y = findColor({242, 1216, 473, 1260}, 
+			"0|0|0xab8845,-7|-2|0x332622,20|0|0x332822,32|-4|0x9b7744,73|-3|0x403322,85|-10|0xbe9866,100|-5|0x333322,123|-5|0xf5d37d,140|2|0xceba77,151|-1|0x383322,160|-1|0xddbb7e,95|15|0xbb9965,201|-3|0x332d22,183|1|0xaf995a,182|6|0xa78540",
 			85, 0, 0, 0)
 		if x > -1 then
-			ramdomSleep(2000)
+			ramdomSleep(2500)
 			tap(x, y)
 		end
 		-- Quest Clear detect
@@ -81,7 +84,7 @@ function battle()
 			tap(x, y)
 			break
 		end
-		mSleep(100)
+		mSleep(500)
 	end
 	-- Result
 	repeat
