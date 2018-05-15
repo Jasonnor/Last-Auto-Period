@@ -1,7 +1,7 @@
 require("utility")
 function helperSelect(helper)
-	sysLog("Helper Select");
-	if helper == 'friend' then
+	sysLog("Helper Select")
+	if helper == 0 then
 		ramdomSleep(1000)
 		-- Find 20pt Friend
 		x, y = findColor({399, 287, 681, 1207}, 
@@ -18,11 +18,11 @@ function helperSelect(helper)
 			if x > -1 then
 				tap(x, y)
 			else
-				helper = 'guest'
+				helper = 1
 			end
 		end
 	end
-	if helper == 'guest' then
+	if helper == 1 then
 		-- In Light?
 		x, y = findColor({485, 215, 594, 272}, 
 			"0|0|0xffee42,-30|-2|0x885511,38|-1|0x885511,-46|-25|0xbb9955,50|-21|0x9a6824,-45|29|0xbb9955,40|26|0xbb9955,42|18|0x885511",
@@ -66,14 +66,17 @@ function helperSelect(helper)
 end
 
 function battle()
-	sysLog("In Battle");
+	sysLog("In Battle")
 	while true do
 		-- Quest Clear detect
 		x, y = findColor({116, 383, 583, 484}, 
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
 			80, 0, 0, 0)
-		if x > -1 then
-			sysLog("Quest Clear");
+		x2, y2 = findColor({67, 215, 415, 408}, 
+			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
+			90, 0, 0, 0)
+		if x > -1 or x2 > -1 then
+			sysLog("Quest Clear")
 			ramdomSleep(1000)
 			tap(x, y)
 			break
@@ -113,7 +116,7 @@ function battle()
 end
 
 function battleResult()
-	sysLog("Battle Result");
+	sysLog("Battle Result")
 	repeat
 		ramdomSleep(500)
 		x, y = findColor({67, 215, 415, 408}, 

@@ -1,20 +1,24 @@
 require("utility")
 require("scenes")
-init("0", 0);
-sysLog("Script start ...")
-flag = appIsRunning("jp.co.happyelements.mirror");
-if flag == 0 then
-	sysLog("Open Last Period ...");
-	runApp("jp.co.happyelements.mirror")
+init("0", 0)
+UIret, UIresults = showUI("ui.json")
+if UIret == 0 then
+	sysLog("Exit")
+	do return end
 end
--- Touch Screen
-x, y = findColor({182, 1024, 529, 1087}, 
-	"0|0|0xeef2f9,-294|-102|0xc59861,19|1|0x4d3e31,40|-1|0x9c99a7",
-	90, 1, 1, 1)
-if x > -1 then
+sysLog("Script start ...")
+flag = appIsRunning("jp.co.happyelements.mirror")
+if flag == 0 then
+	sysLog("Open Last Period ...")
+	runApp("jp.co.happyelements.mirror")
+	-- Touch Screen
+	repeat
+		ramdomSleep(1000)
+		x, y = findColor({182, 1024, 529, 1087}, 
+			"0|0|0xeef2f9,-294|-102|0xc59861,19|1|0x4d3e31,40|-1|0x9c99a7",
+			90, 1, 1, 1)
+	until x > -1
 	tap(x, y)
-else
-	sysLog("Game Already Started");
 end
 -- Game
 while true do
@@ -24,7 +28,7 @@ while true do
 		"0|0|0x4a4638,40|-4|0x3f3728,97|-1|0xaeb0ab,138|3|0x34443c,-62|-48|0xaa8855,7|-48|0x54401e,80|-48|0xc5a55d,98|-43|0x8e7044",
 		90, 0, 0, 0)
 	if x > -1 then
-		helperSelect('friend')
+		helperSelect(UIresults["helperGroup"])
 	end
 	-- Battle Detect
 	x, y = findColor({3, 3, 685, 39}, 

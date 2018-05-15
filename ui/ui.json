@@ -15,6 +15,34 @@
          "text" : "Last Auto Period",
          "bg" : "255,255,255",
          "type" : "Label"
+      },
+      {
+         "id" : "helperGroup",
+         "width" : 540,
+         "height" : 200,
+         "type" : "LinearLayout",
+         "views" : [
+            //LinearLayout 控件内的所有子控件都需要加入width属性指定宽度
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : "24",
+               "text" : "Helper: ",
+               "bg" : "255,255,255",
+               "type" : "Label",
+               "width" : "90"
+            },
+            {
+               "id" : "helper",
+               "list" : "Friend, Guest",
+               "select" : "0",
+               "size" : "24",
+               "type" : "RadioGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,0",
+               "width" : "400"
+            }
+         ]
       }
    ]
 }
