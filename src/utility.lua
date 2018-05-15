@@ -16,6 +16,14 @@ function tap(x, y)
 	touchUp(1, x, y)
 end
 
+function tapByFinger(finger, x, y)
+	x = ramdomCoordinate(x)
+	y = ramdomCoordinate(y)
+	touchDown(finger, x, y)
+	mSleep(50)
+	touchUp(finger, x, y)
+end
+
 function drag(x1, y1, x2, y2)
 	x1 = ramdomCoordinate(x1)
 	y1 = ramdomCoordinate(y1)
