@@ -33,4 +33,11 @@ while true do
 	if x > -1 then
 		battle()
 	end
+	-- Event Detect
+	x, y = findColor({29, 135, 697, 320}, 
+		"0|0|0xb39d55,110|-2|0xfb7500,228|-2|0x556688,377|-2|0xffffff,516|5|0x43658e,518|-126|0x452423,297|-122|0x856f6d,79|-122|0x482d26,-68|-119|0x232221,500|-27|0xfff8a0,369|-8|0xffffff,134|-7|0x444455",
+		85, 0, 0, 0)
+	if x > -1 then
+		event()
+	end
 end

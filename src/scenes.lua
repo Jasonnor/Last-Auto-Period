@@ -123,3 +123,51 @@ function battle()
 	until x > -1
 	tap(x, y)
 end
+
+function event()
+	-- Ramdom select Iona or Monokuma
+	math.randomseed(os.time())
+	if math.random(0, 1) == 0 then
+		tap(370, 660)
+	else
+		tap(370, 780)
+	end
+	ramdomSleep(1000)
+	tap(370, 780)
+	-- Join multiplayer battle
+	repeat
+		ramdomSleep(1000)
+		x, y = findColor({361, 686, 667, 774}, 
+			"0|0|0x004433,-48|-3|0x2d1e0f,74|-4|0xf6f5f5,-71|-25|0x398366,63|-23|0x51b172,5|-32|0xffdd77,-9|31|0xffc132,-111|21|0x119966",
+			85, 0, 0, 0)
+	until x > -1
+	tap(x, y)
+	while true do
+		-- Find anyone OK
+		repeat
+			-- Refresh
+			tap(678, 1100)
+			ramdomSleep(1500)
+			x, y = findColor({313, 208, 419, 932}, 
+				"0|0|0x534734,18|0|0x2d1e0f,36|1|0x766d57,63|2|0xffffdd,79|3|0xffffdd,-14|1|0xfdfcdb",
+				85, 0, 0, 0)
+		until x > -1
+		tap(x, y)
+		ramdomSleep(1500)
+		-- Full room
+		x, y = findColor({72, 440, 645, 835}, 
+			"0|0|0x81786f,51|2|0x004433,-72|-29|0xffde79,77|-26|0xffe37d,-143|-152|0x9b937a,113|-155|0xffffdd,-80|-281|0x443627,15|-286|0xffffdd,-146|-315|0xbb9966,139|-316|0xbb9966,-279|63|0x221100,267|59|0x433220,70|-3|0x003322,-163|-162|0x2d1e0f,-151|-159|0xffffdd,-14|-277|0xffffff",
+			85, 0, 0, 0)
+		if x > -1 then
+			tap(x, y)
+		end
+		-- Ready
+		x, y = findColor({204, 1146, 526, 1233}, 
+			"0|0|0xd9c750,-24|-49|0xffdd4f,-24|-35|0xd88800,6|-49|0x003322,8|-21|0x159e66,48|-47|0x003333,56|-25|0x0c8855,101|-47|0xf4f4f3,117|-26|0x008552,217|-49|0x003322,218|-22|0x119955,253|-52|0xf1c44c,111|-51|0xb0aaa5,127|-51|0xf2f1f0,153|-52|0xffffff,68|-55|0x45392c",
+			85, 0, 0, 0)
+		if x > -1 then
+			tap(x, y)
+			break
+		end
+	end
+end
