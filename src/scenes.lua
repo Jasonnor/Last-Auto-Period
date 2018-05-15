@@ -1,7 +1,7 @@
 require("utility")
 function helperSelect(helper)
 	sysLog("Helper Select")
-	if helper == 0 then
+	if helper == '0' then
 		ramdomSleep(1000)
 		-- Find 20pt Friend
 		x, y = findColor({399, 287, 681, 1207}, 
@@ -18,11 +18,11 @@ function helperSelect(helper)
 			if x > -1 then
 				tap(x, y)
 			else
-				helper = 1
+				helper = '1'
 			end
 		end
 	end
-	if helper == 1 then
+	if helper == '1' then
 		-- In Light?
 		x, y = findColor({485, 215, 594, 272}, 
 			"0|0|0xffee42,-30|-2|0x885511,38|-1|0x885511,-46|-25|0xbb9955,50|-21|0x9a6824,-45|29|0xbb9955,40|26|0xbb9955,42|18|0x885511",
