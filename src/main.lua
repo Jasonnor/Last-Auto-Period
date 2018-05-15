@@ -24,7 +24,7 @@ while true do
 		"0|0|0x4a4638,40|-4|0x3f3728,97|-1|0xaeb0ab,138|3|0x34443c,-62|-48|0xaa8855,7|-48|0x54401e,80|-48|0xc5a55d,98|-43|0x8e7044",
 		90, 0, 0, 0)
 	if x > -1 then
-		helperSelect()
+		helperSelect('friend')
 	end
 	-- Battle Detect
 	x, y = findColor({3, 3, 685, 39}, 
