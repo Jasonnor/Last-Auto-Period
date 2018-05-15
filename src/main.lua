@@ -1,8 +1,8 @@
 require("utility")
 require("scenes")
 init("0", 0)
-UIret, UIresults = showUI("ui.json")
-if UIret == 0 then
+UIreturn, UIresults = showUI("ui.json")
+if UIreturn == 0 then
 	sysLog("Exit")
 	do return end
 end

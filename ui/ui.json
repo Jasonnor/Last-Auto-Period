@@ -2,7 +2,7 @@
    "style" : "default",
    "config" : "save_LastPeriod.dat",
    "width" : 540,
-   "height" : 960,
+   "height" : 800,
    "cancelscroll" : true,
    "countdown" : 0,
    "cancelname" : "Cancel",

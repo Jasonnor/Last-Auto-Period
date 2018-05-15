@@ -18,6 +18,8 @@ function helperSelect(helper)
 			if x > -1 then
 				tap(x, y)
 			else
+				drag(710, 800, 710, 330)
+				ramdomSleep(500)
 				helper = '1'
 			end
 		end
@@ -126,7 +128,7 @@ function battleResult()
 			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
 			90, 0, 0, 0)
 	until x > -1
-	for i = 1, 5, 1 do
+	for i = 1, 6, 1 do
 		tap(x, y)
 		ramdomSleep(500)
 	end
