@@ -82,7 +82,14 @@ function battle()
 			break
 		end
 		-- Attack
-		repeat
+		while true do
+			-- Attack detect
+			x, y = findColor({171, 1061, 542, 1273}, 
+				"0|0|0x332c1b,19|-1|0x3d2a1a,51|-1|0xa07d49,104|-1|0xb99755,171|0|0x332e20,209|6|0x333322,207|30|0xbb9958,102|27|0xb18c55,8|27|0xac834e",
+				90, 0, 0, 0)
+			if x <= -1 then
+				break
+			end
 			-- Overkill detect
 			--x, y = findColor({424, 253, 708, 337}, "0|0|0xffb33e,32|-1|0x980000,36|-1|0xff9821,56|3|0xff7c02,66|15|0xffba2b,73|0|0xffa92d,94|-6|0xffb63f,118|4|0xffeb1b,164|0|0xffa000,213|-23|0xff2c0c,210|-3|0xff9000,242|28|0x630800,249|6|0xfdd34b,111|-12|0x950000",85, 0, 0, 0)
 			-- Use power up
@@ -98,20 +105,16 @@ function battle()
 				tap(363, 1139)
 				mSleep(1658)
 			end
-			-- Attack detect
-			x, y = findColor({171, 1061, 542, 1273}, 
-				"0|0|0x332c1b,19|-1|0x3d2a1a,51|-1|0xa07d49,104|-1|0xb99755,171|0|0x332e20,209|6|0x333322,207|30|0xbb9958,102|27|0xb18c55,8|27|0xac834e",
-				90, 0, 0, 0)
-		until x <= -1
+		end
 		-- Defense detect
 		x, y = findColor({242, 1216, 473, 1260}, 
 			"0|0|0xab8845,-7|-2|0x332622,20|0|0x332822,32|-4|0x9b7744,73|-3|0x403322,85|-10|0xbe9866,100|-5|0x333322,123|-5|0xf5d37d,140|2|0xceba77,151|-1|0x383322,160|-1|0xddbb7e,95|15|0xbb9965,201|-3|0x332d22,183|1|0xaf995a,182|6|0xa78540",
 			85, 0, 0, 0)
 		if x > -1 then
-			mSleep(1658)
+			mSleep(1200)
 			tap(x, y)
 		end
-		mSleep(500)
+		mSleep(300)
 	end
 end
 
