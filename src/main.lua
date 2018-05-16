@@ -24,9 +24,9 @@ end
 while true do
 	ramdomSleep(1000)
 	-- Helper Detect
-	x, y = findColor({157, 109, 451, 195}, 
-		"0|0|0x4a4638,40|-4|0x3f3728,97|-1|0xaeb0ab,138|3|0x34443c,-62|-48|0xaa8855,7|-48|0x54401e,80|-48|0xc5a55d,98|-43|0x8e7044",
-		90, 0, 0, 0)
+	x, y = findColor({33, 150, 689, 194}, 
+		"0|0|0x3a3c2d,111|-1|0x3f3b31,34|4|0x474336,308|10|0x4e4830,363|9|0x4e482f,429|1|0x4e4931,493|-1|0x4e4a32,152|-3|0xe6e5e4,151|11|0x3f3c35,165|13|0xc7c7c4,166|8|0xffffff,167|-3|0x3a372e,177|6|0x807e79,183|2|0xcececb,189|-4|0x36392b,188|12|0xb8b7b4,216|4|0xffffff,216|-6|0xd3d4d0,237|-2|0x8c8b7f,230|14|0x353929",
+		85, 0, 0, 0)
 	if x > -1 then
 		helperSelect(UIresults["helper"])
 	end
