@@ -30,19 +30,19 @@ while true do
 	if x > -1 then
 		helperSelect(UIresults["helper"])
 	end
-	-- Battle Detect
-	x, y = findColor({3, 3, 685, 39}, 
-		"0|0|0x00f7f9,19|12|0xffffff,59|12|0x1d3d38,86|7|0x0099a7,130|10|0xd7d5d2,157|10|0x928b83,173|8|0xffffff,317|12|0xffc336,321|4|0xbf5320,509|6|0xcf6130,526|13|0xf59d59,615|7|0xfff4e3,619|21|0xf699aa,315|16|0x83551c,514|17|0xe2793d,614|-2|0xffffff",
-		90, 0, 0, 0)
-	if x > -1 then
-		battle()
-	end
 	-- Battle Result Detect
 	x, y = findColor({67, 215, 415, 408}, 
 		"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
 		90, 0, 0, 0)
 	if x > -1 then
 		battleResult()
+	end
+	-- Battle Detect
+	x, y = findColor({3, 3, 685, 39}, 
+		"0|0|0x00f7f9,19|12|0xffffff,59|12|0x1d3d38,86|7|0x0099a7,130|10|0xd7d5d2,157|10|0x928b83,173|8|0xffffff,317|12|0xffc336,321|4|0xbf5320,509|6|0xcf6130,526|13|0xf59d59,615|7|0xfff4e3,619|21|0xf699aa,315|16|0x83551c,514|17|0xe2793d,614|-2|0xffffff",
+		90, 0, 0, 0)
+	if x > -1 then
+		battle()
 	end
 	-- Event Detect
 	x, y = findColor({29, 135, 697, 320}, 
