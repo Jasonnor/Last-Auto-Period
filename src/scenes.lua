@@ -83,6 +83,7 @@ function battle()
 			tap(x, y)
 			break
 		end
+		wTime = 0
 		-- Attack
 		while true do
 			-- Attack detect
@@ -102,14 +103,25 @@ function battle()
 			x, y = findColor({597, 1224, 709, 1264}, 
 				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
 				80, 0, 0, 0)
+			-- Slow Attack detect
+			xSlow, yTemp = findColor({194, 1046, 529, 1258}, 
+				"0|0|0xa49a86,57|-6|0x4e4438,92|13|0xffe7c8,162|-15|0xe1d6c2,228|2|0xffd22e,274|56|0xff8312,230|74|0xeeb78d,202|40|0x1c1317,95|53|0x993430,91|7|0xffe7c8,46|107|0xaf8b55,121|115|0x332b21,150|112|0x332516,74|62|0xe12729",
+				85, 0, 0, 0)
+			xSlow2, yTemp = findColor({188, 1049, 524, 1259}, 
+				"0|0|0x56434f,20|28|0x72606c,36|0|0x4e3d4a,39|23|0x6a5874,65|-25|0x474b5c,109|31|0xffded2,148|0|0x74503e,185|46|0x67626e,208|0|0xa38781,203|67|0xb7a7ab,109|81|0x9e95b1,66|71|0xaaa6c3,30|105|0x8d653e,127|115|0xd4aa6e",
+				85, 0, 0, 0)
 			-- Use skill only if not overkill
 			if x > -1 and xTemp <= -1 then
 				tap(664, 1188)
-				mSleep(3496)
+				mSleep(3513 - math.ceil(wTime / 5) * 50)
+			elseif xSlow > -1 or xSlow2 > -1 then
+				tap(363, 1139)
+				mSleep(2109 - math.ceil(wTime / 5) * 50)
 			else
 				tap(363, 1139)
-				mSleep(1658)
+				mSleep(1658 - math.ceil(wTime / 5) * 50)
 			end
+			wTime = wTime + 1
 		end
 		-- Defense detect
 		x, y = findColor({242, 1216, 473, 1260}, 
@@ -133,7 +145,7 @@ function battleResult()
 	until x > -1
 	for i = 1, 6, 1 do
 		tap(x, y)
-		ramdomSleep(500)
+		ramdomSleep(800)
 	end
 	-- Add Friend?
 	ramdomSleep(1500)
