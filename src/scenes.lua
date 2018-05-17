@@ -83,7 +83,6 @@ function battle()
 			tap(x, y)
 			break
 		end
-		wTime = 0
 		-- Attack
 		while true do
 			-- Attack detect
@@ -96,35 +95,47 @@ function battle()
 			-- Use power up
 			tapByFinger(2, 56, 1022)
 			-- Overkill detect
-			xTemp, yTemp = findColor({424, 253, 708, 337}, 
+			xOverkill, y = findColor({424, 253, 708, 337}, 
 				"0|0|0xffb33e,32|-1|0x980000,36|-1|0xff9821,56|3|0xff7c02,66|15|0xffba2b,73|0|0xffa92d,94|-6|0xffb63f,118|4|0xffeb1b,164|0|0xffa000,213|-23|0xff2c0c,210|-3|0xff9000,242|28|0x630800,249|6|0xfdd34b,111|-12|0x950000",
 				85, 0, 0, 0)
 			-- Skill detect
 			x, y = findColor({597, 1224, 709, 1264}, 
 				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
 				80, 0, 0, 0)
-			-- Slow Attack detect
-			xSlow, yTemp = findColor({194, 1046, 529, 1258}, 
-				"0|0|0xa49a86,57|-6|0x4e4438,92|13|0xffe7c8,162|-15|0xe1d6c2,228|2|0xffd22e,274|56|0xff8312,230|74|0xeeb78d,202|40|0x1c1317,95|53|0x993430,91|7|0xffe7c8,46|107|0xaf8b55,121|115|0x332b21,150|112|0x332516,74|62|0xe12729",
+			-- Character Attack detect
+			xIona, y = findColor({186, 1069, 538, 1185}, 
+				"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
 				85, 0, 0, 0)
-			xSlow2, yTemp = findColor({188, 1049, 524, 1259}, 
-				"0|0|0x56434f,20|28|0x72606c,36|0|0x4e3d4a,39|23|0x6a5874,65|-25|0x474b5c,109|31|0xffded2,148|0|0x74503e,185|46|0x67626e,208|0|0xa38781,203|67|0xb7a7ab,109|81|0x9e95b1,66|71|0xaaa6c3,30|105|0x8d653e,127|115|0xd4aa6e",
+			xMaid, y = findColor({193, 1065, 535, 1193}, 
+				"0|0|0x878195,3|26|0x86a3e9,4|70|0x4d5054,60|-2|0x7d848e,69|42|0x928ff8,70|72|0xe8ebee,119|11|0x6e6d9c,130|71|0x404551,133|93|0xd03a63,199|9|0x7061af,194|48|0x8d7cbf,196|79|0x4f5961,246|15|0x814362,245|46|0xa771a1,244|78|0xeba4c3",
 				85, 0, 0, 0)
-			xSlow3, yTemp = findColor({187, 1059, 530, 1252}, 
-				"0|0|0x292a38,45|6|0x22294e,66|1|0x292f4d,127|-4|0xf7efec,174|14|0xc5aeed,217|11|0x995979,236|32|0xab77a2,173|66|0x535c61,122|55|0x8b1a40,17|55|0x9db2dc,-49|56|0xedebf3,-24|116|0xa77f41,45|123|0xac8855,167|117|0xf0e090,223|91|0xe7dcd2,233|54|0xeebccb,99|58|0xff9aa1,42|61|0x6d7791,68|17|0xfdd5d1",
+			xZombie, y = findColor({192, 1061, 534, 1191}, 
+				"0|0|0x5d1700,1|41|0xd89016,15|83|0xcec3ad,67|-7|0xdfd6c6,67|28|0xffd7ad,72|69|0xe5282b,136|7|0xf8edd9,136|35|0x736957,146|71|0xcb4642,234|5|0xfece2c,207|47|0x3d363b,232|69|0x3a3128",
 				85, 0, 0, 0)
+			xMonokuma, y = findColor({213, 1060, 518, 1186}, 
+				"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
+				85, 0, 0, 0)
+			detectDelay = 100
 			-- Use skill only if not overkill
-			if x > -1 and xTemp <= -1 then
+			if x > -1 and xOverkill <= -1 then
 				tap(664, 1188)
-				mSleep(3513 - math.ceil(wTime / 5) * 80)
-			elseif xSlow > -1 or xSlow2 > -1 or xSlow3 > -1 then
+				mSleep(3513 - detectDelay)
+			elseif xIona > -1 then
 				tap(363, 1139)
-				mSleep(2100 - math.ceil(wTime / 5) * 150)
+				mSleep(1680 - detectDelay)
+			elseif xMaid > -1 then
+				tap(363, 1139)
+				mSleep(1910 - detectDelay)
+			elseif xZombie > -1 then
+				tap(363, 1139)
+				mSleep(2100 - detectDelay)
+			elseif xMonokuma > -1 then
+				tap(363, 1139)
+				mSleep(2250 - detectDelay)
 			else
 				tap(363, 1139)
-				mSleep(1650 - math.ceil(wTime / 5) * 150)
+				mSleep(1600 - detectDelay)
 			end
-			wTime = wTime + 1
 		end
 		-- Defense detect
 		x, y = findColor({242, 1216, 473, 1260}, 
