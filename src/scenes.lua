@@ -110,16 +110,19 @@ function battle()
 			xSlow2, yTemp = findColor({188, 1049, 524, 1259}, 
 				"0|0|0x56434f,20|28|0x72606c,36|0|0x4e3d4a,39|23|0x6a5874,65|-25|0x474b5c,109|31|0xffded2,148|0|0x74503e,185|46|0x67626e,208|0|0xa38781,203|67|0xb7a7ab,109|81|0x9e95b1,66|71|0xaaa6c3,30|105|0x8d653e,127|115|0xd4aa6e",
 				85, 0, 0, 0)
+			xSlow3, yTemp = findColor({187, 1059, 530, 1252}, 
+				"0|0|0x292a38,45|6|0x22294e,66|1|0x292f4d,127|-4|0xf7efec,174|14|0xc5aeed,217|11|0x995979,236|32|0xab77a2,173|66|0x535c61,122|55|0x8b1a40,17|55|0x9db2dc,-49|56|0xedebf3,-24|116|0xa77f41,45|123|0xac8855,167|117|0xf0e090,223|91|0xe7dcd2,233|54|0xeebccb,99|58|0xff9aa1,42|61|0x6d7791,68|17|0xfdd5d1",
+				85, 0, 0, 0)
 			-- Use skill only if not overkill
 			if x > -1 and xTemp <= -1 then
 				tap(664, 1188)
-				mSleep(3513 - math.ceil(wTime / 5) * 50)
-			elseif xSlow > -1 or xSlow2 > -1 then
+				mSleep(3513 - math.ceil(wTime / 5) * 80)
+			elseif xSlow > -1 or xSlow2 > -1 or xSlow3 > -1 then
 				tap(363, 1139)
-				mSleep(2109 - math.ceil(wTime / 5) * 50)
+				mSleep(2100 - math.ceil(wTime / 5) * 150)
 			else
 				tap(363, 1139)
-				mSleep(1658 - math.ceil(wTime / 5) * 50)
+				mSleep(1650 - math.ceil(wTime / 5) * 150)
 			end
 			wTime = wTime + 1
 		end
