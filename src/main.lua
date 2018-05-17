@@ -1,10 +1,13 @@
 require("utility")
 require("scenes")
 init("0", 0)
-UIreturn, UIresults = showUI("ui.json")
+--UIreturn, UIresults = showUI("ui.json")
 if UIreturn == 0 then
 	sysLog("Exit")
 	do return end
+end
+if UIresults == nil then
+   UIresults = { ["helper"] = '0' }
 end
 sysLog("Script start ...")
 flag = appIsRunning("jp.co.happyelements.mirror")
@@ -50,5 +53,13 @@ while true do
 		85, 0, 0, 0)
 	if x > -1 then
 		event()
+	end
+	-- Skip Detect
+	x, y = findColor({576, 16, 700, 79}, 
+"0|0|0x111111,5|13|0xffffff,6|20|0x111111,27|20|0xffffff,30|-12|0x111111,44|-13|0x111111,43|16|0x5e5e5e,61|37|0x111111,87|27|0x5b5b5b,96|21|0xffffff,107|5|0x111111,99|0|0x111111,112|-17|0x111111,63|-14|0x111111,60|13|0xffffff,97|14|0xffffff",
+85, 0, 0, 0)
+	if x > -1 then
+		sysLog("Skip Story")
+		tap(x, y)
 	end
 end
