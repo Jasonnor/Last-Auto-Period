@@ -7,7 +7,7 @@ if UIreturn == 0 then
 	do return end
 end
 if UIresults == nil then
-   UIresults = { ["helper"] = '0' }
+	UIresults = { ["helper"] = '0' }
 end
 sysLog("Script start ...")
 flag = appIsRunning("jp.co.happyelements.mirror")
@@ -56,10 +56,31 @@ while true do
 	end
 	-- Skip Detect
 	x, y = findColor({576, 16, 700, 79}, 
-"0|0|0x111111,5|13|0xffffff,6|20|0x111111,27|20|0xffffff,30|-12|0x111111,44|-13|0x111111,43|16|0x5e5e5e,61|37|0x111111,87|27|0x5b5b5b,96|21|0xffffff,107|5|0x111111,99|0|0x111111,112|-17|0x111111,63|-14|0x111111,60|13|0xffffff,97|14|0xffffff",
-85, 0, 0, 0)
+		"0|0|0x111111,5|13|0xffffff,6|20|0x111111,27|20|0xffffff,30|-12|0x111111,44|-13|0x111111,43|16|0x5e5e5e,61|37|0x111111,87|27|0x5b5b5b,96|21|0xffffff,107|5|0x111111,99|0|0x111111,112|-17|0x111111,63|-14|0x111111,60|13|0xffffff,97|14|0xffffff",
+		85, 0, 0, 0)
 	if x > -1 then
 		sysLog("Skip Story")
+		tap(x, y)
+	end
+	-- Guild Battle Detect
+	x, y = findColor({212, 1195, 507, 1256}, 
+		"0|0|0x0088aa,-2|19|0x00d2ee,-2|37|0x00eeff,50|11|0x7bf2ff,56|32|0x88faff,80|45|0xffffff,99|7|0x003366,132|24|0x99ffff,158|34|0xccffff,173|11|0x00598d,207|24|0x00ddee,217|29|0x00eeff",
+		85, 0, 0, 0)
+	if x > -1 then
+		sysLog("Guild Battle")
+		tap(x, y)
+		repeat
+			ramdomSleep(500)
+			x, y = findColor({110, 713, 344, 813}, 
+				"0|0|0x2d1e0f,-55|4|0x004433,39|4|0x004433,-52|-19|0x54b877,59|-19|0x54b876,-52|34|0xccaf56,83|28|0xc0840e,8|3|0xffffff,-81|8|0x004433,-90|-6|0x003322",
+				85, 0, 0, 0)
+		until x > -1
+		tap(x, y)
+	end
+	x, y = findColor({266, 930, 452, 984}, 
+		"0|0|0xd1bc3f,2|10|0xe3ab36,4|17|0x976320,25|0|0x332411,34|15|0xe59c2f,52|-3|0x5d4634,72|14|0xe7a131,110|21|0x2e1f10,96|3|0x4e3c18,123|14|0x614318,136|15|0xe89e30",
+		85, 0, 0, 0)
+	if x > -1 then
 		tap(x, y)
 	end
 end
