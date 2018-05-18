@@ -177,6 +177,14 @@ function battleResult()
 	if x > -1 then
 		tap(x, y)
 	end
+	-- Event OK
+	ramdomSleep(1500)
+	x, y = findColor({204, 972, 517, 1058}, 
+		"0|0|0x003322,59|0|0x00332f,113|0|0x2b1f11,136|0|0xa6a099,191|-1|0x003322,243|-1|0x003322,266|-6|0xffdd55,260|27|0x7d4f00,114|30|0x2faf73,13|30|0x289e62",
+		85, 0, 0, 0)
+	if x > -1 then
+		tap(x, y)
+	end
 	-- OK2
 	repeat
 		ramdomSleep(1000)
