@@ -154,8 +154,8 @@ function battle(auto)
 				mSleep(1000)
 				tap(x, y)
 			end
-			mSleep(200)
 		end
+		mSleep(200)
 	end
 end
 

@@ -8,7 +8,7 @@ if UIreturn == 0 then
 end
 if UIresults == nil then
 	UIresults = { ["helper"] = '0',
-		  ["auto"] = true}
+		  ["auto"] = false}
 end
 sysLog("Script start ...")
 flag = appIsRunning("jp.co.happyelements.mirror")
