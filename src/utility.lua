@@ -1,6 +1,6 @@
 function ramdomSleep(n)
 	math.randomseed(os.time())
-	mSleep(n + math.random(-500, 500))
+	mSleep(n + math.random(-100, 100))
 end
 
 function ramdomCoordinate(n)
