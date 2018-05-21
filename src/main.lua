@@ -7,7 +7,8 @@ if UIreturn == 0 then
 	do return end
 end
 if UIresults == nil then
-	UIresults = { ["helper"] = '0' }
+	UIresults = { ["helper"] = '0',
+		  ["auto"] = true}
 end
 sysLog("Script start ...")
 flag = appIsRunning("jp.co.happyelements.mirror")
@@ -45,7 +46,7 @@ while true do
 		"0|0|0x00f7f9,19|12|0xffffff,59|12|0x1d3d38,86|7|0x0099a7,130|10|0xd7d5d2,157|10|0x928b83,173|8|0xffffff,317|12|0xffc336,321|4|0xbf5320,509|6|0xcf6130,526|13|0xf59d59,615|7|0xfff4e3,619|21|0xf699aa,315|16|0x83551c,514|17|0xe2793d,614|-2|0xffffff",
 		90, 0, 0, 0)
 	if x > -1 then
-		battle()
+		battle(UIresults["auto"])
 	end
 	-- Event Detect
 	x, y = findColor({29, 135, 697, 320}, 
