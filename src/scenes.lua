@@ -186,7 +186,7 @@ function battleResult()
 		tap(x, y)
 	end
 	-- Event OK
-	ramdomSleep(1500)
+	ramdomSleep(2000)
 	x, y = findColor({7,257,717,1279}, 
 		"0|0|0x003322,59|0|0x00332f,113|0|0x2b1f11,136|0|0xa6a099,191|-1|0x003322,243|-1|0x003322,266|-6|0xffdd55,260|27|0x7d4f00,114|30|0x2faf73,13|30|0x289e62",
 		85, 0, 0, 0)
