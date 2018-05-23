@@ -189,8 +189,8 @@ function battleResult()
 	repeat
 		ramdomSleep(1000)
 		x, y = findColor({7,257,717,1279}, 
-		"0|0|0x003322,59|0|0x00332f,113|0|0x2b1f11,136|0|0xa6a099,191|-1|0x003322,243|-1|0x003322,266|-6|0xffdd55,260|27|0x7d4f00,114|30|0x2faf73,13|30|0x289e62",
-		85, 0, 0, 0)
+			"0|0|0x003322,59|0|0x00332f,113|0|0x2b1f11,136|0|0xa6a099,191|-1|0x003322,243|-1|0x003322,266|-6|0xffdd55,260|27|0x7d4f00,114|30|0x2faf73,13|30|0x289e62",
+			85, 0, 0, 0)
 	until x > -1
 	tap(x, y)
 	-- OK bottom
@@ -208,9 +208,16 @@ function multiplay()
 	repeat
 		tap(674, 1101)
 		ramdomSleep(1000)
-		x, y = findColor({305, 309, 677, 930}, 
-			"0|0|0x403222,0|9|0x322314,37|-1|0xffffdd,30|4|0xe1dfc0,60|7|0xffffdd,72|-6|0xffffdd,80|7|0xd3cfb1,229|7|0xffffdd,241|14|0xffffdd,263|11|0xffffdd,294|6|0xffffdd",
-			85, 0, 0, 0)
-	until x > -1
-	tap(x, y)
+		xStarter, yStarter = findColor({157, 202, 656, 984}, 
+			"0|0|0xffffff,17|-2|0xf1f1f1,28|-1|0x728c97,48|0|0x003355,70|-1|0x003355,82|-1|0x003355,104|0|0x91a9b0,145|0|0x2e1f10,168|0|0x756b55,207|5|0x837b64,220|-3|0xa39c83,381|-2|0xffffdd,406|3|0xffffdd,428|2|0xffffdd,165|-7|0xffffdd",
+			95, 0, 0, 0)
+		xExpert, yExpert = findColor({157, 202, 656, 984}, 
+			"0|0|0x8d7341,-1|9|0xb07d20,24|3|0xffffff,46|5|0xf7f7f0,81|8|0x91774d,100|6|0x664400,146|4|0x6b604c,153|5|0x352717,177|7|0x7f7660,201|7|0x605541,217|7|0xffffdd,228|7|0xfdfddb,371|5|0xffffdd,399|6|0xffffdd,432|6|0xffffdd,203|3|0x2d1e0f",
+			95, 0, 0, 0)
+	until xStarter > -1 or xExpert > -1
+	if xStarter > -1 then
+		tap(xStarter, yStarter)
+	else
+		tap(xExpert, yExpert)
+	end
 end
