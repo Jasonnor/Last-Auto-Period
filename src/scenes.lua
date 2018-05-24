@@ -223,3 +223,16 @@ function multiplay()
 		tap(xExpert, yExpert)
 	end
 end
+
+function room()
+	sysLog("Room")
+	-- Send sticker
+	ramdomSleep(2000)
+	tap(676, 1226)
+	ramdomSleep(500)
+	tap(108, 946)
+	ramdomSleep(1000)
+	-- Ready
+	tap(365, 1179)
+end
+

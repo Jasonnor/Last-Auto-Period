@@ -50,23 +50,29 @@ while true do
 	end
 	-- Multiplay Detect
 	x, y = findColor({63, 316, 634, 432}, 
-"0|0|0x06398f,3|21|0x0c238f,1|55|0xffd257,54|-4|0x999382,71|42|0xffffff,98|84|0x222211,136|8|0x3b2a19,221|48|0xcb9014,325|78|0x453212,307|-9|0x39a0df,402|37|0xffffe1,476|63|0xffffdd",
-85, 0, 0, 0)
+		"0|0|0x06398f,3|21|0x0c238f,1|55|0xffd257,54|-4|0x999382,71|42|0xffffff,98|84|0x222211,136|8|0x3b2a19,221|48|0xcb9014,325|78|0x453212,307|-9|0x39a0df,402|37|0xffffe1,476|63|0xffffdd",
+		85, 0, 0, 0)
 	if x > -1 then
-		sysLog("Multiplay")
 		tap(x, y)
 		ramdomSleep(1000)
 		multiplay()
 	end
 	-- Empty Room
-		x, y = findColor({139, 578, 592, 812}, 
-"0|0|0x2a2011,-75|3|0x003333,56|9|0x004433,-197|-156|0xcecaad,-172|-155|0xfbfbd9,-123|-156|0xffffdd,-46|-149|0xffffdd,29|-149|0xffffdd,121|-149|0xffffdd,154|-160|0x706550,-44|-3|0x003325",
-85, 0, 0, 0)
+	x, y = findColor({139, 578, 592, 812}, 
+		"0|0|0x2a2011,-75|3|0x003333,56|9|0x004433,-197|-156|0xcecaad,-172|-155|0xfbfbd9,-123|-156|0xffffdd,-46|-149|0xffffdd,29|-149|0xffffdd,121|-149|0xffffdd,154|-160|0x706550,-44|-3|0x003325",
+		85, 0, 0, 0)
 	if x > -1 then
 		sysLog("Empty Room")
 		tap(x, y)
 		ramdomSleep(1000)
 		multiplay()
+	end
+	-- Room
+	x, y = findColor({209, 1150, 512, 1220}, 
+		"0|0|0xfdeb86,16|14|0x226644,34|34|0x004433,86|53|0x22aa66,83|2|0x5e4610,97|19|0xe2e0de,112|25|0x392a1c,159|34|0x004433,187|46|0x007744,201|2|0x5e4610,216|18|0x004332,251|40|0x005533,261|45|0x1c3d1e",
+		90, 0, 0, 0)
+	if x > -1 then
+		room()
 	end
 	-- Skip Detect
 	x, y = findColor({576, 16, 700, 79}, 
