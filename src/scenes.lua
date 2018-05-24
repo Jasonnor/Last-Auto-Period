@@ -236,3 +236,71 @@ function room()
 	tap(365, 1179)
 end
 
+function multiplayBattle()
+	sysLog("Multiplay Battle")
+	while true do
+		-- Quest Clear detect
+		x, y = findColor({116, 383, 583, 484}, 
+			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
+			80, 0, 0, 0)
+		xTemp, yTemp = findColor({67, 215, 415, 408}, 
+			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
+			80, 0, 0, 0)
+		if x > -1 or xTemp > -1 then
+			sysLog("Quest Clear")
+			ramdomSleep(1000)
+			tap(x, y)
+			break
+		end
+		nextSleep = 1600
+		-- Attack
+		while true do
+			-- Attack detect
+			x, y = findColor({171, 1061, 542, 1273}, 
+				"0|0|0x332c1b,19|-1|0x3d2a1a,51|-1|0xa07d49,104|-1|0xb99755,171|0|0x332e20,209|6|0x333322,207|30|0xbb9958,102|27|0xb18c55,8|27|0xac834e",
+				85, 0, 0, 0)
+			if x <= -1 then
+				break
+			end
+			mSleep(nextSleep)
+			-- Use power up
+			tapByFinger(2, 40, 1031)
+			tapByFinger(2, 280, 981)
+			tapByFinger(2, 527, 987)
+			-- Skill detect
+			xSkill, y = findColor({597, 1224, 709, 1264}, 
+				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
+				80, 0, 0, 0)
+			-- Character Attack detect
+			xIona, y = findColor({186, 1069, 538, 1185}, 
+				"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
+				85, 0, 0, 0)
+			xMonokuma, y = findColor({213, 1060, 518, 1186}, 
+				"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
+				85, 0, 0, 0)
+			detectDelay = 50
+			if xSkill > -1 then
+				tap(664, 1188)
+				nextSleep = 3513 - detectDelay
+			elseif xIona > -1 then
+				tap(363, 1139)
+				nextSleep = 1680 - detectDelay
+			elseif xMonokuma > -1 then
+				tap(363, 1139)
+				nextSleep = 2250 - detectDelay
+			else
+				tap(363, 1139)
+				nextSleep = 1600 - detectDelay
+			end
+		end
+		-- Defense detect
+		x, y = findColor({242, 1216, 473, 1260}, 
+			"0|0|0xab8845,-7|-2|0x332622,20|0|0x332822,32|-4|0x9b7744,73|-3|0x403322,85|-10|0xbe9866,100|-5|0x333322,123|-5|0xf5d37d,140|2|0xceba77,151|-1|0x383322,160|-1|0xddbb7e,95|15|0xbb9965,201|-3|0x332d22,183|1|0xaf995a,182|6|0xa78540",
+			85, 0, 0, 0)
+		if x > -1 then
+			mSleep(1000)
+			tap(x, y)
+		end
+		mSleep(200)
+	end
+end

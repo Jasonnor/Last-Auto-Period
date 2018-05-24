@@ -74,6 +74,13 @@ while true do
 	if x > -1 then
 		room()
 	end
+	-- Multiplay Battle Detect
+	x, y = findColor({3, 3, 701, 37}, 
+		"0|0|0x002222,16|0|0xefedec,31|0|0x003737,45|2|0x50463a,64|2|0x1f2015,91|1|0x002222,307|-7|0xd8c049,319|-3|0x402211,508|-5|0xce562f,515|0|0xedb282,615|-4|0xffeedd,621|8|0xef99aa,148|-8|0xf3f3f2,171|-5|0xdfddda",
+		90, 0, 0, 0)
+	if x > -1 then
+		multiplayBattle()
+	end
 	-- Skip Detect
 	x, y = findColor({576, 16, 700, 79}, 
 		"0|0|0x111111,5|13|0xffffff,6|20|0x111111,27|20|0xffffff,30|-12|0x111111,44|-13|0x111111,43|16|0x5e5e5e,61|37|0x111111,87|27|0x5b5b5b,96|21|0xffffff,107|5|0x111111,99|0|0x111111,112|-17|0x111111,63|-14|0x111111,60|13|0xffffff,97|14|0xffffff",
