@@ -74,6 +74,16 @@ while true do
 	if x > -1 then
 		room()
 	end
+	-- Room disconnected
+	x, y = findColor({140, 568, 588, 811}, 
+		"0|0|0x004433,45|-1|0x004435,74|0|0xffffff,125|-4|0x004433,-81|-165|0x2d1e0f,-34|-165|0xffffdd,40|-167|0xe2e0c1,152|-161|0xd7d4b5,212|-160|0xffffdd,8|-292|0xd6d3d0,50|-294|0xffffdd,116|-287|0xd7d4d1,357|-252|0x534c2a",
+		80, 0, 0, 0)
+	if x > -1 then
+		sysLog("Room Disconnected")
+		tap(x, y)
+		ramdomSleep(1000)
+		multiplay()
+	end
 	-- Multiplay Battle Detect
 	x, y = findColor({3, 3, 701, 37}, 
 		"0|0|0x002222,16|0|0xefedec,31|0|0x003737,45|2|0x50463a,64|2|0x1f2015,91|1|0x002222,307|-7|0xd8c049,319|-3|0x402211,508|-5|0xce562f,515|0|0xedb282,615|-4|0xffeedd,621|8|0xef99aa,148|-8|0xf3f3f2,171|-5|0xdfddda",
