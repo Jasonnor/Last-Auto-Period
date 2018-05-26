@@ -87,8 +87,20 @@ function battle(auto)
 			tap(x, y)
 			break
 		end
+		-- Guild Battle Clear
+		if auto == 'guild' then
+			x, y = findColor({76, 373, 643, 489}, 
+				"0|0|0xee7c02,-29|14|0xffff66,-25|28|0xffff99,1|25|0xffff89,83|-19|0xffa200,99|-19|0xffa200,176|-15|0xffaa00,171|2|0xee7700,267|-15|0xffaa00,360|-11|0xf4a213,459|-22|0xffba11,448|-7|0xf79b11,443|26|0xffff74,264|24|0xffff66,170|23|0xffff66,115|16|0x623e11,-7|34|0xffffaa",
+				80, 0, 0, 0)
+			if x > -1 then
+				sysLog("Guild Battle Clear")
+				ramdomSleep(1000)
+				tap(x, y)
+				break
+			end
+		end
 		-- Auto detect
-		if auto == true then
+		if auto == true or auto == 'guild' then
 			x, y = findColor({615, 68, 715, 124}, 
 				"0|0|0xffeebb,0|11|0xaa8822,4|27|0xeee48f,83|1|0xffff66,27|1|0xffeeaa,33|-11|0xeecc71,44|-7|0xffeec9,45|2|0xd6d6d6,62|13|0xffffff,75|16|0xbb992d,75|-6|0xffeebb,62|16|0xb2b2b2,70|31|0xf7d632",
 				80, 0, 0, 0)
