@@ -255,13 +255,16 @@ function multiplayBattle()
 		x, y = findColor({116, 383, 583, 484}, 
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
 			80, 0, 0, 0)
-		xTemp, yTemp = findColor({67, 215, 415, 408}, 
+		xResult, y = findColor({67, 215, 415, 408}, 
 			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
 			80, 0, 0, 0)
-		if x > -1 or xTemp > -1 then
+		xGameover, y = findColor({19, 337, 681, 443}, 
+			"0|0|0x3355ff,-31|13|0x3377ff,8|45|0x66ccff,66|6|0x3355ff,51|37|0x55aaff,50|49|0x66ccff,83|46|0x66ccff,124|10|0x3366ff,133|33|0x55a6ff,171|1|0x3355ff,208|29|0x4499ff,228|34|0x55aaff,321|27|0x4499ff,410|28|0x4499ff,445|28|0x4499ff,494|32|0x5599ff,568|30|0x5599ff",
+			80, 0, 0, 0)
+		if x > -1 or xResult > -1 or xGameover > -1 then
 			sysLog("Quest Clear")
 			ramdomSleep(1000)
-			tap(x, y)
+			tap(350, 530)
 			break
 		end
 		nextSleep = 1600
