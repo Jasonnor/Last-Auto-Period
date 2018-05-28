@@ -224,10 +224,10 @@ function multiplay()
 		ramdomSleep(1000)
 		xStarter, yStarter = findColor({157, 202, 656, 984}, 
 			"0|0|0xffffff,17|-2|0xf1f1f1,28|-1|0x728c97,48|0|0x003355,70|-1|0x003355,82|-1|0x003355,104|0|0x91a9b0,145|0|0x2e1f10,168|0|0x756b55,207|5|0x837b64,220|-3|0xa39c83,381|-2|0xffffdd,406|3|0xffffdd,428|2|0xffffdd,165|-7|0xffffdd",
-			70, 0, 0, 0)
+			60, 0, 0, 0)
 		xExpert, yExpert = findColor({157, 202, 656, 984}, 
 			"0|0|0x8d7341,-1|9|0xb07d20,24|3|0xffffff,46|5|0xf7f7f0,81|8|0x91774d,100|6|0x664400,146|4|0x6b604c,153|5|0x352717,177|7|0x7f7660,201|7|0x605541,217|7|0xffffdd,228|7|0xfdfddb,371|5|0xffffdd,399|6|0xffffdd,432|6|0xffffdd,203|3|0x2d1e0f",
-			70, 0, 0, 0)
+			60, 0, 0, 0)
 	until xStarter > -1 or xExpert > -1
 	if xStarter > -1 then
 		tap(xStarter, yStarter)
