@@ -30,7 +30,7 @@ while true do
 	-- Helper Detect
 	x, y = findColor({33, 150, 689, 194}, 
 		"0|0|0x3a3c2d,111|-1|0x3f3b31,34|4|0x474336,308|10|0x4e4830,363|9|0x4e482f,429|1|0x4e4931,493|-1|0x4e4a32,152|-3|0xe6e5e4,151|11|0x3f3c35,165|13|0xc7c7c4,166|8|0xffffff,167|-3|0x3a372e,177|6|0x807e79,183|2|0xcececb,189|-4|0x36392b,188|12|0xb8b7b4,216|4|0xffffff,216|-6|0xd3d4d0,237|-2|0x8c8b7f,230|14|0x353929",
-		85, 0, 0, 0)
+		80, 0, 0, 0)
 	if x > -1 then
 		helperSelect(UIresults["helper"])
 	end
@@ -53,6 +53,7 @@ while true do
 		"0|0|0x06398f,3|21|0x0c238f,1|55|0xffd257,54|-4|0x999382,71|42|0xffffff,98|84|0x222211,136|8|0x3b2a19,221|48|0xcb9014,325|78|0x453212,307|-9|0x39a0df,402|37|0xffffe1,476|63|0xffffdd",
 		85, 0, 0, 0)
 	if x > -1 then
+		ramdomSleep(1000)
 		tap(x, y)
 		ramdomSleep(1000)
 		multiplay()
@@ -60,7 +61,7 @@ while true do
 	-- Empty Room
 	x, y = findColor({139, 578, 592, 812}, 
 		"0|0|0x2a2011,-75|3|0x003333,56|9|0x004433,-197|-156|0xcecaad,-172|-155|0xfbfbd9,-123|-156|0xffffdd,-46|-149|0xffffdd,29|-149|0xffffdd,121|-149|0xffffdd,154|-160|0x706550,-44|-3|0x003325",
-		85, 0, 0, 0)
+		90, 0, 0, 0)
 	if x > -1 then
 		sysLog("Empty Room")
 		tap(x, y)
