@@ -222,16 +222,21 @@ function multiplay()
 		ramdomSleep(5000)
 		tap(674, 1101)
 		ramdomSleep(1000)
-		xStarter, yStarter = findColor({157, 202, 656, 984}, 
-			"0|0|0xffffff,17|-2|0xf1f1f1,28|-1|0x728c97,48|0|0x003355,70|-1|0x003355,82|-1|0x003355,104|0|0x91a9b0,145|0|0x2e1f10,168|0|0x756b55,207|5|0x837b64,220|-3|0xa39c83,381|-2|0xffffdd,406|3|0xffffdd,428|2|0xffffdd,165|-7|0xffffdd",
-			60, 0, 0, 0)
-		xExpert, yExpert = findColor({157, 202, 656, 984}, 
-			"0|0|0x8d7341,-1|9|0xb07d20,24|3|0xffffff,46|5|0xf7f7f0,81|8|0x91774d,100|6|0x664400,146|4|0x6b604c,153|5|0x352717,177|7|0x7f7660,201|7|0x605541,217|7|0xffffdd,228|7|0xfdfddb,371|5|0xffffdd,399|6|0xffffdd,432|6|0xffffdd,203|3|0x2d1e0f",
-			60, 0, 0, 0)
-	until xStarter > -1 or xExpert > -1
-	if xStarter > -1 then
+		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986}, 
+			"0|0|0x4a3e2c,12|11|0x857d66,20|12|0xfbfbd9,27|0|0xfefefe,39|5|0x6c6257,52|1|0x938b84,37|10|0xcbc7aa,61|4|0xfbfbd9,67|11|0xfdfcdb,76|9|0xd7d3b5,88|8|0xd3cfb2,87|-2|0xffffff,94|-2|0xa59e84,113|12|0xffffdd,128|16|0xcecbc7,139|17|0xa39c96,141|10|0xffffff,149|5|0xffffff,160|4|0xcac7c3,154|8|0xaca6a0",
+			70, 0, 0, 0)
+		xStarter, yStarter = findColor({143, 206, 645, 928}, 
+			"0|0|0x98dcff,3|6|0x124a6c,17|8|0x61b1df,26|11|0x52b0e3,44|6|0x3b96ce,78|7|0x216082,105|5|0x003355,209|-2|0x999279,213|1|0xfcfbda,219|10|0x9b947b,209|7|0x887f68,224|8|0x493c2a,231|11|0x7c735d,234|0|0xc0bca0,225|3|0x2d1e0f,436|4|0xffffdd,374|5|0xffffdd,390|4|0xffffdd,400|5|0xffffdd,425|5|0xffffdd",
+			70, 0, 0, 0)
+		xExpert, yExpert = findColor({143, 206, 645, 928}, 
+			"0|0|0xf2ca62,5|9|0x664400,18|8|0x664400,32|16|0xa8730c,55|16|0xfaa51d,72|7|0xffcc54,93|10|0xf0ac26,102|5|0x664400,210|0|0x2e1f10,212|1|0xf7f6d5,214|3|0xffffdd,217|10|0x312213,226|9|0x2d1e0f,230|9|0xeae9c9,231|3|0x605541,231|-4|0xffffdd,391|3|0xffffdd,404|6|0xffffdd,422|6|0xffffdd,437|6|0xffffdd",
+			70, 0, 0, 0)
+	until xSpiralCave > -1 or xStarter > -1 or xExpert > -1 
+	if xSpiralCave > -1 then
+		tap(xSpiralCave, ySpiralCave)
+	elseif xStarter > -1 then
 		tap(xStarter, yStarter)
-	else
+	elseif xExpert > -1 then
 		tap(xExpert, yExpert)
 	end
 end
