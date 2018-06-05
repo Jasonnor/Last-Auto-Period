@@ -177,9 +177,9 @@ end
 
 function battleResult()
 	sysLog("Battle Result")
-	for i = 1, 4, 1 do
+	for i = 1, 6, 1 do
 		tap(125, 273)
-		ramdomSleep(300)
+		ramdomSleep(500)
 	end
 	-- Add Friend?
 	ramdomSleep(500)
@@ -197,6 +197,7 @@ function battleResult()
 		until x > -1
 		tap(x, y)
 	end
+	ramdomSleep(500)
 	-- OK center
 	x, y = findColor({1, 299, 724, 1097}, 
 		"0|0|0x226a44,-1|9|0x003322,-1|23|0x005544,10|-2|0x227755,14|15|0xa8a19b,14|25|0xcdc9c6,17|-3|0x318655,28|12|0xffffff,50|22|0x847c73,48|4|0xada8a2,52|10|0x003322,63|22|0x004933,55|13|0x003333,25|16|0x72685e,6|15|0x004433,44|8|0xe9e7e6",

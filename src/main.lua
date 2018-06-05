@@ -122,4 +122,12 @@ while true do
 	if x > -1 then
 		tap(x, y)
 	end
+	-- Event OK
+	x, y = findColor({203, 337, 525, 428}, 
+		"0|0|0xffe2ad,13|3|0xd39519,34|3|0xbb8801,51|3|0xa06200,-38|29|0xbe922b,-25|31|0xd6a833,-7|27|0xe9c840,4|39|0xb2721e,28|32|0x814e11,45|29|0xe7bf3c,53|38|0xffe2ad,72|33|0xffe2ad,80|27|0xffe14a,88|39|0xffe2ad,87|33|0xffca40,17|63|0x956200,35|62|0x804d00",
+		85, 0, 0, 0)
+	if x > -1 then
+		sysLog("Event OK")
+		tap(360, 930)
+	end
 end
