@@ -137,12 +137,12 @@ function battle(auto)
 				xZombie, y = findColor({192, 1061, 534, 1191}, 
 					"0|0|0x5d1700,1|41|0xd89016,15|83|0xcec3ad,67|-7|0xdfd6c6,67|28|0xffd7ad,72|69|0xe5282b,136|7|0xf8edd9,136|35|0x736957,146|71|0xcb4642,234|5|0xfece2c,207|47|0x3d363b,232|69|0x3a3128",
 					85, 0, 0, 0)
-				xMonokuma, y = findColor({213, 1060, 518, 1186}, 
-					"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
-					85, 0, 0, 0)
+				--xMonokuma, y = findColor({213, 1060, 518, 1186}, 
+				--	"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
+				--	85, 0, 0, 0)
 				xErebowa, y = findColor({153, 1071, 564, 1188}, 
-"0|0|0xcaccbf,15|12|0x3b2933,33|38|0x4c393f,56|55|0xd3f7f6,79|-15|0x2f589a,124|17|0x2f1b3e,158|39|0xf6ccbd,198|48|0x604b5b,210|-15|0x2e4b98,279|13|0xe5e5e7,318|33|0xcb5662,345|52|0x431229,315|58|0xc25363,346|14|0x9a806f,210|18|0x90caca,252|38|0xc0ffff,163|27|0xf7cfc0,129|28|0x8fdadb",
-85, 0, 0, 0)
+					"0|0|0xcaccbf,15|12|0x3b2933,33|38|0x4c393f,56|55|0xd3f7f6,79|-15|0x2f589a,124|17|0x2f1b3e,158|39|0xf6ccbd,198|48|0x604b5b,210|-15|0x2e4b98,279|13|0xe5e5e7,318|33|0xcb5662,345|52|0x431229,315|58|0xc25363,346|14|0x9a806f,210|18|0x90caca,252|38|0xc0ffff,163|27|0xf7cfc0,129|28|0x8fdadb",
+					85, 0, 0, 0)
 				detectDelay = 80
 				-- Use skill only if not overkill
 				if x > -1 and xOverkill <= -1 then
@@ -157,15 +157,15 @@ function battle(auto)
 				elseif xZombie > -1 then
 					tap(363, 1139)
 					mSleep(2100 - detectDelay)
-				elseif xMonokuma > -1 then
-					tap(363, 1139)
-					mSleep(2250 - detectDelay)
+					--elseif xMonokuma > -1 then
+					--	tap(363, 1139)
+					--	mSleep(2250 - detectDelay)
 				elseif xErebowa > -1 then
 					tap(363, 1139)
 					mSleep(1104 - detectDelay)
-				--elseif xRuruna > -1 then
-				--	tap(363, 1139)
-				--	mSleep(1674 - detectDelay)
+					--elseif xRuruna > -1 then
+					--	tap(363, 1139)
+					--	mSleep(1674 - detectDelay)
 				else
 					tap(363, 1139)
 					mSleep(1600 - detectDelay)
@@ -186,7 +186,7 @@ end
 
 function battleResult()
 	sysLog("Battle Result")
-	for i = 1, 6, 1 do
+	for i = 1, 5, 1 do
 		tap(125, 273)
 		ramdomSleep(500)
 	end
@@ -205,17 +205,17 @@ function battleResult()
 				90, 0, 0, 0)
 		until x > -1
 		tap(x, y)
+		ramdomSleep(1000)
 	end
-	ramdomSleep(500)
 	-- OK center
 	x, y = findColor({1, 299, 724, 1097}, 
 		"0|0|0x226a44,-1|9|0x003322,-1|23|0x005544,10|-2|0x227755,14|15|0xa8a19b,14|25|0xcdc9c6,17|-3|0x318655,28|12|0xffffff,50|22|0x847c73,48|4|0xada8a2,52|10|0x003322,63|22|0x004933,55|13|0x003333,25|16|0x72685e,6|15|0x004433,44|8|0xe9e7e6",
 		75, 0, 0, 0)
 	if x > -1 then
 		tap(x, y)
+		ramdomSleep(1000)
 	end
 	-- OK bottom
-	ramdomSleep(500)
 	x, y = findColor({373, 1166, 691, 1258}, 
 		"0|0|0x867f76,-107|-17|0x227752,93|1|0x004433,-82|18|0x058855,141|22|0xeeaa11,-135|-28|0xc49444,-137|31|0xfcb720,127|-28|0xa47c35,125|29|0x835107",
 		90, 0, 0, 0)
@@ -314,9 +314,6 @@ function multiplayBattle()
 			xIona, y = findColor({186, 1069, 538, 1185}, 
 				"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
 				85, 0, 0, 0)
-			xMonokuma, y = findColor({213, 1060, 518, 1186}, 
-				"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
-				85, 0, 0, 0)
 			detectDelay = 50
 			if xSkill > -1 then
 				tap(664, 1188)
@@ -324,9 +321,6 @@ function multiplayBattle()
 			elseif xIona > -1 then
 				tap(363, 1139)
 				nextSleep = 1680 - detectDelay
-			elseif xMonokuma > -1 then
-				tap(363, 1139)
-				nextSleep = 2250 - detectDelay
 			else
 				tap(363, 1139)
 				nextSleep = 1600 - detectDelay
