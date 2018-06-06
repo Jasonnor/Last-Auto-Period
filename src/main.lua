@@ -53,10 +53,16 @@ while true do
 		"0|0|0x06398f,3|21|0x0c238f,1|55|0xffd257,54|-4|0x999382,71|42|0xffffff,98|84|0x222211,136|8|0x3b2a19,221|48|0xcb9014,325|78|0x453212,307|-9|0x39a0df,402|37|0xffffe1,476|63|0xffffdd",
 		85, 0, 0, 0)
 	if x > -1 then
-		ramdomSleep(1000)
 		tap(x, y)
-		ramdomSleep(1000)
 		multiplay()
+	ramdomSleep(1000)
+	end
+	x, y = findColor({20, 140, 727, 387}, 
+		"0|0|0x253037,111|-7|0xe8e9ea,168|-5|0x2e3e3e,233|-5|0x2d3c3c,306|-4|0x2f3e3f,336|-5|0xd2d5d5,405|-5|0x263437,304|1|0xc1c5c5,203|9|0x2a383a,547|63|0xddbb55,530|138|0x674d22,537|178|0xddaa55,-97|77|0xddbb64,-102|160|0x554422,-109|145|0x3a3a33,258|1|0x626d6e,361|-6|0x273436",
+		80, 0, 0, 0)
+	if x > -1 then
+		multiplay()
+	ramdomSleep(1000)
 	end
 	-- Empty Room
 	x, y = findColor({139, 578, 592, 812}, 
