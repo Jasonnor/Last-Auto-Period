@@ -238,26 +238,45 @@ end
 function multiplay()
 	sysLog("Multiplay")
 	-- Find anyone OK & no prefer
-	repeat
+	while true do
 		ramdomSleep(5000)
 		tap(674, 1101)
 		ramdomSleep(1000)
+		xEvent1, yEvent1 = findColor({71, 215, 625, 928}, 
+			"0|0|0xe0d6b4,32|4|0x423424,71|5|0xcecac7,80|6|0xffffff,103|6|0xfafaf9,124|4|0xd1ceca,127|-2|0xbdb99c,93|99|0xf2ecec,112|100|0x882211,137|100|0x8a2413,241|99|0x443726,257|101|0x5e533f,297|101|0xb9b498,304|102|0x504432,312|103|0x2d1e0f,433|97|0x423423,433|104|0x2d1e0f,472|105|0xffffdd,501|105|0xffffdd,74|10|0xfefedc",
+			70, 0, 0, 0)
+		if xEvent1 > -1 then
+			tap(xEvent1, yEvent1)
+			break
+		end
+		xEvent2, yEvent2 = findColor({71, 215, 625, 928}, 
+			"0|0|0x1224b2,29|-2|0xfdfdfd,46|-1|0x665b50,86|-1|0x47392a,131|1|0x4f4234,89|94|0x9a473c,126|98|0xa45f57,238|99|0x342515,252|99|0xffffdd,269|98|0x675c48,284|97|0xb5b094,299|97|0xffffdd,305|96|0x2d1e0f,435|92|0x2e1f10,432|99|0x958d75,433|100|0xf8f8d7,474|98|0xffffdd,501|98|0xffffdd,44|0|0xa7a287,136|98|0x882211",
+			70, 0, 0, 0)
+		if xEvent2 > -1 then
+			tap(xEvent2, yEvent2)
+			break
+		end
 		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986}, 
 			"0|0|0x4a3e2c,12|11|0x857d66,20|12|0xfbfbd9,27|0|0xfefefe,39|5|0x6c6257,52|1|0x938b84,37|10|0xcbc7aa,61|4|0xfbfbd9,67|11|0xfdfcdb,76|9|0xd7d3b5,88|8|0xd3cfb2,87|-2|0xffffff,94|-2|0xa59e84,113|12|0xffffdd,128|16|0xcecbc7,139|17|0xa39c96,141|10|0xffffff,149|5|0xffffff,160|4|0xcac7c3,154|8|0xaca6a0",
 			70, 0, 0, 0)
+		if xSpiralCave > -1 then
+			tap(xSpiralCave, ySpiralCave)
+			break
+		end
 		xStarter, yStarter = findColor({143, 206, 645, 928}, 
 			"0|0|0x98dcff,3|6|0x124a6c,17|8|0x61b1df,26|11|0x52b0e3,44|6|0x3b96ce,78|7|0x216082,105|5|0x003355,209|-2|0x999279,213|1|0xfcfbda,219|10|0x9b947b,209|7|0x887f68,224|8|0x493c2a,231|11|0x7c735d,234|0|0xc0bca0,225|3|0x2d1e0f,436|4|0xffffdd,374|5|0xffffdd,390|4|0xffffdd,400|5|0xffffdd,425|5|0xffffdd",
 			70, 0, 0, 0)
+		if xStarter > -1 then
+			tap(xStarter, yStarter)
+			break
+		end
 		xExpert, yExpert = findColor({143, 206, 645, 928}, 
 			"0|0|0xf2ca62,5|9|0x664400,18|8|0x664400,32|16|0xa8730c,55|16|0xfaa51d,72|7|0xffcc54,93|10|0xf0ac26,102|5|0x664400,210|0|0x2e1f10,212|1|0xf7f6d5,214|3|0xffffdd,217|10|0x312213,226|9|0x2d1e0f,230|9|0xeae9c9,231|3|0x605541,231|-4|0xffffdd,391|3|0xffffdd,404|6|0xffffdd,422|6|0xffffdd,437|6|0xffffdd",
 			70, 0, 0, 0)
-	until xSpiralCave > -1 or xStarter > -1 or xExpert > -1 
-	if xSpiralCave > -1 then
-		tap(xSpiralCave, ySpiralCave)
-	elseif xStarter > -1 then
-		tap(xStarter, yStarter)
-	elseif xExpert > -1 then
-		tap(xExpert, yExpert)
+		if xExpert > -1 then
+			tap(xExpert, yExpert)
+			break
+		end
 	end
 end
 
