@@ -256,7 +256,14 @@ function multiplay()
 			tap(xEvent2, yEvent2)
 			break
 		end
-		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986}, 
+		xEvent3, yEvent3 = findColor({66, 213, 530, 940},
+			"0|0|0x5b10c0,19|-5|0x715b7b,39|-10|0xffffff,55|-2|0x413423,90|-1|0x746b56,130|-1|0xffffff,180|0|0xffffdd,230|0|0xffffdd,243|1|0xf7f6f6,241|-10|0xffffdd,204|-6|0xeae8e7,197|-4|0xffffdd,133|0|0x675b48,73|-9|0xffffdd,129|-10|0xd0cdae,240|93|0x544735,253|94|0xffffdd,282|92|0x2d1e0f,305|92|0x392b1b,322|92|0x2f2111",
+			70, 0, 0, 0)
+		if xEvent3 > -1 then
+			tap(xEvent3, yEvent3)
+			break
+		end
+		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986},
 			"0|0|0x4a3e2c,12|11|0x857d66,20|12|0xfbfbd9,27|0|0xfefefe,39|5|0x6c6257,52|1|0x938b84,37|10|0xcbc7aa,61|4|0xfbfbd9,67|11|0xfdfcdb,76|9|0xd7d3b5,88|8|0xd3cfb2,87|-2|0xffffff,94|-2|0xa59e84,113|12|0xffffdd,128|16|0xcecbc7,139|17|0xa39c96,141|10|0xffffff,149|5|0xffffff,160|4|0xcac7c3,154|8|0xaca6a0",
 			70, 0, 0, 0)
 		if xSpiralCave > -1 then
