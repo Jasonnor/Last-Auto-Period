@@ -321,7 +321,8 @@ function multiplayBattle()
 			tap(350, 530)
 			break
 		end
-		nextSleep = 1600
+		detectDelay = 100
+		nextSleep = 1600 - detectDelay
 		-- Attack
 		while true do
 			-- Attack detect
@@ -344,7 +345,6 @@ function multiplayBattle()
 			xIona, y = findColor({186, 1069, 538, 1185}, 
 				"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
 				85, 0, 0, 0)
-			detectDelay = 50
 			if xSkill > -1 then
 				tap(664, 1188)
 				nextSleep = 3513 - detectDelay
