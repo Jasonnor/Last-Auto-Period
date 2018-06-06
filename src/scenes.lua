@@ -4,7 +4,7 @@ function helperSelect(helper)
 	-- Find 20pt Friend
 	if helper == '0' then
 		ramdomSleep(1000)
-		x, y = findColor({399, 287, 681, 1207}, 
+		x, y = findColor({399, 287, 681, 1207},
 			"0|0|0x6ee197,19|6|0x22ee88,36|-3|0x184c2c,47|3|0x165b3e,57|-3|0xcbffaa,63|-1|0xa4fea9,82|-3|0xffee22,86|9|0xffd422,104|3|0x221100,118|0|0xffff55,139|5|0xeeaa00,151|7|0x331b00,168|1|0xedd33b,180|10|0xffeb22",
 			85, 0, 0, 0)
 		if x > -1 then
@@ -12,7 +12,7 @@ function helperSelect(helper)
 		else
 			drag(710, 330, 710, 800)
 			ramdomSleep(1000)
-			x, y = findColor({399, 287, 681, 1207}, 
+			x, y = findColor({399, 287, 681, 1207},
 				"0|0|0x6ee197,19|6|0x22ee88,36|-3|0x184c2c,47|3|0x165b3e,57|-3|0xcbffaa,63|-1|0xa4fea9,82|-3|0xffee22,86|9|0xffd422,104|3|0x221100,118|0|0xffff55,139|5|0xeeaa00,151|7|0x331b00,168|1|0xedd33b,180|10|0xffeb22",
 				85, 0, 0, 0)
 			if x > -1 then
@@ -26,12 +26,12 @@ function helperSelect(helper)
 	end
 	if helper == '1' then
 		-- In Light?
-		x, y = findColor({485, 215, 594, 272}, 
+		x, y = findColor({485, 215, 594, 272},
 			"0|0|0xffee42,-30|-2|0x885511,38|-1|0x885511,-46|-25|0xbb9955,50|-21|0x9a6824,-45|29|0xbb9955,40|26|0xbb9955,42|18|0x885511",
 			90, 0, 0, 0)
 		if x <= -1 then
 			-- Not in Light
-			x, y = findColor({485, 215, 594, 272}, 
+			x, y = findColor({485, 215, 594, 272},
 				"0|0|0x7f772a,-33|-14|0x442a08,34|-16|0x442a08,-37|21|0x442a08,40|28|0xbb9955,-7|19|0x452c0a",
 				90, 0, 0, 0)
 			if x > -1 then
@@ -50,11 +50,11 @@ function helperSelect(helper)
 			end
 			ramdomSleep(1000)
 			-- Find Guest + MAX アレーティア
-			x, y = findColor({13, 288, 186, 1192}, 
+			x, y = findColor({13, 288, 186, 1192},
 				"0|0|0xe675b5,-62|-38|0xffef67,-26|-37|0x593242,-3|-50|0x57516b,15|-53|0x453518,21|-53|0xfff167,35|-56|0x7d6d2a,-52|21|0x9c8b8d,-54|40|0xffc850,-35|47|0xb58c39,-20|42|0x4a2323,1|43|0xecb94a,12|42|0xffc850,20|43|0x84652a,26|19|0x3f3111,-1|14|0xffe3cc,-33|24|0x8f7676",
 				90, 0, 0, 0)
 			-- Find Guest + MAX Monokuma
-			--x, y = findColor({13, 288, 186, 1192}, 
+			--x, y = findColor({13, 288, 186, 1192},
 			--	"0|0|0xffe1d7,-25|6|0xddc1c0,-30|-5|0x4c4455,-31|-23|0x868182,-37|-43|0xd5ae37,-53|-38|0xede648,-14|34|0x422f16,-25|37|0xfac44e,16|39|0x392813,37|36|0xffc850,40|-51|0xc69325,46|-63|0x2f1611,31|-71|0xd32533,-4|-33|0x56515e,-4|-40|0x484044,30|-41|0x821e0e,38|-26|0xf47a8d",
 			--	85, 0, 0, 0)
 			i = i + 1
@@ -64,7 +64,7 @@ function helperSelect(helper)
 	-- MissionStart
 	repeat
 		ramdomSleep(1000)
-		x, y = findColor({218, 977, 498, 1042}, 
+		x, y = findColor({218, 977, 498, 1042},
 			"0|0|0x232313,-115|-20|0xf2d077,-101|-1|0x003322,-58|12|0xf4f4f3,-37|2|0x003333,35|33|0x266e4a,117|5|0x003733,144|-23|0x9e712d",
 			90, 0, 0, 0)
 	until x > -1
@@ -75,10 +75,10 @@ function battle(auto)
 	sysLog("In Battle")
 	while true do
 		-- Quest Clear detect
-		x, y = findColor({116, 383, 583, 484}, 
+		x, y = findColor({116, 383, 583, 484},
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
 			80, 0, 0, 0)
-		xTemp, yTemp = findColor({67, 215, 415, 408}, 
+		xTemp, yTemp = findColor({67, 215, 415, 408},
 			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
 			90, 0, 0, 0)
 		if x > -1 or xTemp > -1 then
@@ -89,7 +89,7 @@ function battle(auto)
 		end
 		if auto == 'guild' then
 			-- Guild Battle Clear
-			x, y = findColor({76, 373, 643, 489}, 
+			x, y = findColor({76, 373, 643, 489},
 				"0|0|0xee7c02,-29|14|0xffff66,-25|28|0xffff99,1|25|0xffff89,83|-19|0xffa200,99|-19|0xffa200,176|-15|0xffaa00,171|2|0xee7700,267|-15|0xffaa00,360|-11|0xf4a213,459|-22|0xffba11,448|-7|0xf79b11,443|26|0xffff74,264|24|0xffff66,170|23|0xffff66,115|16|0x623e11,-7|34|0xffffaa",
 				80, 0, 0, 0)
 			if x > -1 then
@@ -100,7 +100,7 @@ function battle(auto)
 			end
 		elseif auto == 'pvp' then
 			-- PVP Battle Clear
-			x, y = findColor({119, 430, 597, 635}, 
+			x, y = findColor({119, 430, 597, 635},
 				"0|0|0xffdd66,6|30|0xffffb2,7|52|0xcc5511,22|83|0xeeaa33,41|38|0xffffb9,55|4|0xffdd77,69|61|0xcc6622,89|58|0xd55e1a,205|-14|0xffc45e,207|34|0xffffb4,202|68|0xdf7924,300|11|0xfff892,300|70|0xffcb76,357|75|0xdd8833,367|39|0xffffbb,375|-2|0xffd966,204|116|0x90470e,71|109|0xfff67f,383|112|0x8a3605",
 				80, 0, 0, 0)
 			if x > -1 then
@@ -112,7 +112,7 @@ function battle(auto)
 		end
 		-- Auto detect
 		if auto == true or auto == 'guild' then
-			x, y = findColor({615, 68, 715, 124}, 
+			x, y = findColor({615, 68, 715, 124},
 				"0|0|0xffeebb,0|11|0xaa8822,4|27|0xeee48f,83|1|0xffff66,27|1|0xffeeaa,33|-11|0xeecc71,44|-7|0xffeec9,45|2|0xd6d6d6,62|13|0xffffff,75|16|0xbb992d,75|-6|0xffeebb,62|16|0xb2b2b2,70|31|0xf7d632",
 				80, 0, 0, 0)
 			if x <= -1 then
@@ -122,7 +122,7 @@ function battle(auto)
 			-- Attack
 			while true do
 				-- Attack detect
-				x, y = findColor({171, 1061, 542, 1273}, 
+				x, y = findColor({171, 1061, 542, 1273},
 					"0|0|0x332c1b,19|-1|0x3d2a1a,51|-1|0xa07d49,104|-1|0xb99755,171|0|0x332e20,209|6|0x333322,207|30|0xbb9958,102|27|0xb18c55,8|27|0xac834e",
 					90, 0, 0, 0)
 				if x <= -1 then
@@ -131,27 +131,27 @@ function battle(auto)
 				-- Use power up
 				tapByFinger(2, 56, 1022)
 				-- Overkill detect
-				xOverkill, y = findColor({424, 253, 708, 337}, 
+				xOverkill, y = findColor({424, 253, 708, 337},
 					"0|0|0xffb33e,32|-1|0x980000,36|-1|0xff9821,56|3|0xff7c02,66|15|0xffba2b,73|0|0xffa92d,94|-6|0xffb63f,118|4|0xffeb1b,164|0|0xffa000,213|-23|0xff2c0c,210|-3|0xff9000,242|28|0x630800,249|6|0xfdd34b,111|-12|0x950000",
 					85, 0, 0, 0)
 				-- Skill detect
-				x, y = findColor({597, 1224, 709, 1264}, 
+				x, y = findColor({597, 1224, 709, 1264},
 					"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
 					80, 0, 0, 0)
 				-- Character Attack detect
-				xIona, y = findColor({186, 1069, 538, 1185}, 
+				xIona, y = findColor({186, 1069, 538, 1185},
 					"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
 					85, 0, 0, 0)
-				xMaid, y = findColor({193, 1065, 535, 1193}, 
+				xMaid, y = findColor({193, 1065, 535, 1193},
 					"0|0|0x878195,3|26|0x86a3e9,4|70|0x4d5054,60|-2|0x7d848e,69|42|0x928ff8,70|72|0xe8ebee,119|11|0x6e6d9c,130|71|0x404551,133|93|0xd03a63,199|9|0x7061af,194|48|0x8d7cbf,196|79|0x4f5961,246|15|0x814362,245|46|0xa771a1,244|78|0xeba4c3",
 					85, 0, 0, 0)
-				xZombie, y = findColor({192, 1061, 534, 1191}, 
+				xZombie, y = findColor({192, 1061, 534, 1191},
 					"0|0|0x5d1700,1|41|0xd89016,15|83|0xcec3ad,67|-7|0xdfd6c6,67|28|0xffd7ad,72|69|0xe5282b,136|7|0xf8edd9,136|35|0x736957,146|71|0xcb4642,234|5|0xfece2c,207|47|0x3d363b,232|69|0x3a3128",
 					85, 0, 0, 0)
-				--xMonokuma, y = findColor({213, 1060, 518, 1186}, 
+				--xMonokuma, y = findColor({213, 1060, 518, 1186},
 				--	"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
 				--	85, 0, 0, 0)
-				xErebowa, y = findColor({153, 1071, 564, 1188}, 
+				xErebowa, y = findColor({153, 1071, 564, 1188},
 					"0|0|0xcaccbf,15|12|0x3b2933,33|38|0x4c393f,56|55|0xd3f7f6,79|-15|0x2f589a,124|17|0x2f1b3e,158|39|0xf6ccbd,198|48|0x604b5b,210|-15|0x2e4b98,279|13|0xe5e5e7,318|33|0xcb5662,345|52|0x431229,315|58|0xc25363,346|14|0x9a806f,210|18|0x90caca,252|38|0xc0ffff,163|27|0xf7cfc0,129|28|0x8fdadb",
 					85, 0, 0, 0)
 				detectDelay = 80
@@ -183,7 +183,7 @@ function battle(auto)
 				end
 			end
 			-- Defense detect
-			x, y = findColor({242, 1216, 473, 1260}, 
+			x, y = findColor({242, 1216, 473, 1260},
 				"0|0|0xab8845,-7|-2|0x332622,20|0|0x332822,32|-4|0x9b7744,73|-3|0x403322,85|-10|0xbe9866,100|-5|0x333322,123|-5|0xf5d37d,140|2|0xceba77,151|-1|0x383322,160|-1|0xddbb7e,95|15|0xbb9965,201|-3|0x332d22,183|1|0xaf995a,182|6|0xa78540",
 				85, 0, 0, 0)
 			if x > -1 then
@@ -203,7 +203,7 @@ function battleResult()
 	end
 	-- Add Friend?
 	ramdomSleep(500)
-	x, y = findColor({34, 435, 704, 857}, 
+	x, y = findColor({34, 435, 704, 857},
 		"0|0|0x2d1e0f,-98|2|0x004333,69|2|0x003433,-106|-25|0x443300,105|4|0x004433,1|-344|0xa39c96,66|-344|0xfefefe,122|-341|0x8d847c,229|-340|0xffeecc,321|-337|0xe1dedc,237|1|0x880000,318|1|0x49150a,399|4|0x880000,467|4|0xffeecc,500|4|0xae9959",
 		90, 0, 0, 0)
 	if x > -1 then
@@ -211,7 +211,7 @@ function battleResult()
 		-- OK center
 		repeat
 			ramdomSleep(1000)
-			x, y = findColor({71, 443, 645, 841}, 
+			x, y = findColor({71, 443, 645, 841},
 				"0|0|0xe5e4e2,-83|-6|0x226644,50|-7|0x227753,-81|26|0x007144,39|29|0x118a55,-106|-18|0xdeb055,92|-16|0x33330c,-93|44|0xeca11c,89|41|0xccaf56,98|24|0xe39900",
 				90, 0, 0, 0)
 		until x > -1
@@ -219,7 +219,7 @@ function battleResult()
 		ramdomSleep(1000)
 	end
 	-- OK center
-	x, y = findColor({1, 299, 724, 1097}, 
+	x, y = findColor({1, 299, 724, 1097},
 		"0|0|0x226a44,-1|9|0x003322,-1|23|0x005544,10|-2|0x227755,14|15|0xa8a19b,14|25|0xcdc9c6,17|-3|0x318655,28|12|0xffffff,50|22|0x847c73,48|4|0xada8a2,52|10|0x003322,63|22|0x004933,55|13|0x003333,25|16|0x72685e,6|15|0x004433,44|8|0xe9e7e6",
 		75, 0, 0, 0)
 	if x > -1 then
@@ -227,7 +227,7 @@ function battleResult()
 		ramdomSleep(1000)
 	end
 	-- OK bottom
-	x, y = findColor({373, 1166, 691, 1258}, 
+	x, y = findColor({373, 1166, 691, 1258},
 		"0|0|0x867f76,-107|-17|0x227752,93|1|0x004433,-82|18|0x058855,141|22|0xeeaa11,-135|-28|0xc49444,-137|31|0xfcb720,127|-28|0xa47c35,125|29|0x835107",
 		90, 0, 0, 0)
 	if x > -1 then
@@ -242,14 +242,14 @@ function multiplay()
 		ramdomSleep(5000)
 		tap(674, 1101)
 		ramdomSleep(1000)
-		xEvent1, yEvent1 = findColor({71, 215, 625, 928}, 
+		xEvent1, yEvent1 = findColor({71, 215, 625, 928},
 			"0|0|0xe0d6b4,32|4|0x423424,71|5|0xcecac7,80|6|0xffffff,103|6|0xfafaf9,124|4|0xd1ceca,127|-2|0xbdb99c,93|99|0xf2ecec,112|100|0x882211,137|100|0x8a2413,241|99|0x443726,257|101|0x5e533f,297|101|0xb9b498,304|102|0x504432,312|103|0x2d1e0f,433|97|0x423423,433|104|0x2d1e0f,472|105|0xffffdd,501|105|0xffffdd,74|10|0xfefedc",
 			70, 0, 0, 0)
 		if xEvent1 > -1 then
 			tap(xEvent1, yEvent1)
 			break
 		end
-		xEvent2, yEvent2 = findColor({71, 215, 625, 928}, 
+		xEvent2, yEvent2 = findColor({71, 215, 625, 928},
 			"0|0|0x1224b2,29|-2|0xfdfdfd,46|-1|0x665b50,86|-1|0x47392a,131|1|0x4f4234,89|94|0x9a473c,126|98|0xa45f57,238|99|0x342515,252|99|0xffffdd,269|98|0x675c48,284|97|0xb5b094,299|97|0xffffdd,305|96|0x2d1e0f,435|92|0x2e1f10,432|99|0x958d75,433|100|0xf8f8d7,474|98|0xffffdd,501|98|0xffffdd,44|0|0xa7a287,136|98|0x882211",
 			70, 0, 0, 0)
 		if xEvent2 > -1 then
@@ -263,14 +263,14 @@ function multiplay()
 			tap(xSpiralCave, ySpiralCave)
 			break
 		end
-		xStarter, yStarter = findColor({143, 206, 645, 928}, 
+		xStarter, yStarter = findColor({143, 206, 645, 928},
 			"0|0|0x98dcff,3|6|0x124a6c,17|8|0x61b1df,26|11|0x52b0e3,44|6|0x3b96ce,78|7|0x216082,105|5|0x003355,209|-2|0x999279,213|1|0xfcfbda,219|10|0x9b947b,209|7|0x887f68,224|8|0x493c2a,231|11|0x7c735d,234|0|0xc0bca0,225|3|0x2d1e0f,436|4|0xffffdd,374|5|0xffffdd,390|4|0xffffdd,400|5|0xffffdd,425|5|0xffffdd",
 			70, 0, 0, 0)
 		if xStarter > -1 then
 			tap(xStarter, yStarter)
 			break
 		end
-		xExpert, yExpert = findColor({143, 206, 645, 928}, 
+		xExpert, yExpert = findColor({143, 206, 645, 928},
 			"0|0|0xf2ca62,5|9|0x664400,18|8|0x664400,32|16|0xa8730c,55|16|0xfaa51d,72|7|0xffcc54,93|10|0xf0ac26,102|5|0x664400,210|0|0x2e1f10,212|1|0xf7f6d5,214|3|0xffffdd,217|10|0x312213,226|9|0x2d1e0f,230|9|0xeae9c9,231|3|0x605541,231|-4|0xffffdd,391|3|0xffffdd,404|6|0xffffdd,422|6|0xffffdd,437|6|0xffffdd",
 			70, 0, 0, 0)
 		if xExpert > -1 then
@@ -284,7 +284,7 @@ function room()
 	sysLog("Room")
 	ramdomSleep(2000)
 	-- Difficult detect
-	x, y = findColor({82, 147, 226, 193}, 
+	x, y = findColor({82, 147, 226, 193},
 		"0|0|0xfa7869,0|15|0xfa7869,16|0|0xfa7869,22|1|0xf57668,29|13|0xfa7869,41|9|0xf77768,54|17|0xfa7869,58|20|0xfa7869,75|11|0xf77768,85|14|0xf77768,89|14|0xf87768,99|3|0xfa7869,108|6|0xf97869,131|11|0xea7365",
 		80, 0, 0, 0)
 	if x > -1 then
@@ -306,13 +306,13 @@ function multiplayBattle()
 	sysLog("Multiplay Battle")
 	while true do
 		-- Quest Clear detect
-		x, y = findColor({116, 383, 583, 484}, 
+		x, y = findColor({116, 383, 583, 484},
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
 			80, 0, 0, 0)
-		xResult, y = findColor({67, 215, 415, 408}, 
+		xResult, y = findColor({67, 215, 415, 408},
 			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
 			80, 0, 0, 0)
-		xGameover, y = findColor({19, 337, 681, 443}, 
+		xGameover, y = findColor({19, 337, 681, 443},
 			"0|0|0x3355ff,-31|13|0x3377ff,8|45|0x66ccff,66|6|0x3355ff,51|37|0x55aaff,50|49|0x66ccff,83|46|0x66ccff,124|10|0x3366ff,133|33|0x55a6ff,171|1|0x3355ff,208|29|0x4499ff,228|34|0x55aaff,321|27|0x4499ff,410|28|0x4499ff,445|28|0x4499ff,494|32|0x5599ff,568|30|0x5599ff",
 			80, 0, 0, 0)
 		if x > -1 or xResult > -1 or xGameover > -1 then
@@ -326,7 +326,7 @@ function multiplayBattle()
 		-- Attack
 		while true do
 			-- Attack detect
-			x, y = findColor({171, 1061, 542, 1273}, 
+			x, y = findColor({171, 1061, 542, 1273},
 				"0|0|0x332c1b,19|-1|0x3d2a1a,51|-1|0xa07d49,104|-1|0xb99755,171|0|0x332e20,209|6|0x333322,207|30|0xbb9958,102|27|0xb18c55,8|27|0xac834e",
 				85, 0, 0, 0)
 			if x <= -1 then
@@ -338,11 +338,11 @@ function multiplayBattle()
 			tapByFinger(2, 280, 981)
 			tapByFinger(2, 527, 987)
 			-- Skill detect
-			xSkill, y = findColor({597, 1224, 709, 1264}, 
+			xSkill, y = findColor({597, 1224, 709, 1264},
 				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
 				80, 0, 0, 0)
 			-- Character Attack detect
-			xIona, y = findColor({186, 1069, 538, 1185}, 
+			xIona, y = findColor({186, 1069, 538, 1185},
 				"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
 				85, 0, 0, 0)
 			if xSkill > -1 then
@@ -357,7 +357,7 @@ function multiplayBattle()
 			end
 		end
 		-- Defense detect
-		x, y = findColor({242, 1216, 473, 1260}, 
+		x, y = findColor({242, 1216, 473, 1260},
 			"0|0|0xab8845,-7|-2|0x332622,20|0|0x332822,32|-4|0x9b7744,73|-3|0x403322,85|-10|0xbe9866,100|-5|0x333322,123|-5|0xf5d37d,140|2|0xceba77,151|-1|0x383322,160|-1|0xddbb7e,95|15|0xbb9965,201|-3|0x332d22,183|1|0xaf995a,182|6|0xa78540",
 			85, 0, 0, 0)
 		if x > -1 then
