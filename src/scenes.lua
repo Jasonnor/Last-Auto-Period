@@ -297,7 +297,6 @@ function room()
 	if x > -1 then
 		tap(93, 1226)
 		ramdomSleep(5000)
-		multiplay()
 	else
 		-- Send sticker
 		tap(676, 1226)
