@@ -54,7 +54,6 @@ while true do
 		85, 0, 0, 0)
 	if x > -1 then
 		tap(x, y)
-		multiplay()
 		ramdomSleep(1000)
 	end
 	x, y = findColor({20, 140, 727, 387},
@@ -125,6 +124,18 @@ while true do
 		85, 0, 0, 0)
 	if x > -1 then
 		tap(x, y)
+		ramdomSleep(200)
+		tap(x, y)
+	end
+	-- Guild Battle Ability
+	x, y = findColor({554, 1149, 708, 1275},
+		"0|0|0x3b5049,5|-8|0xb0aca2,-21|-10|0x1e7bbc,-54|-5|0x2189c7,-62|2|0x269cd5,-24|8|0x2aace1,21|8|0x2aace1,44|-8|0x1f80c0,62|-33|0x0d3c8e,13|-51|0x221911,-13|-51|0x2c2211,-53|-51|0xc4c491,-68|-59|0xcca96c,-52|-60|0x47472e,-29|-60|0x221e11,-4|-60|0x222211,-6|2|0x742b18,-14|-10|0x493511,53|10|0x2cb2e5",
+		85, 0, 1, 0)
+	if x > -1 then
+		sysLog("Guild Battle Ability")
+		tap(x, y)
+		ramdomSleep(500)
+		tap(225, 765)
 	end
 	-- PVP Detect
 	x, y = findColor({8, 932, 708, 998},
