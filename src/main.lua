@@ -103,6 +103,16 @@ while true do
 		sysLog("Skip Story")
 		tap(x, y)
 	end
+	-- Guild Battle Ability
+	x, y = findColor({554, 1149, 708, 1275},
+		"0|0|0x3b5049,5|-8|0xb0aca2,-21|-10|0x1e7bbc,-54|-5|0x2189c7,-62|2|0x269cd5,-24|8|0x2aace1,21|8|0x2aace1,44|-8|0x1f80c0,62|-33|0x0d3c8e,13|-51|0x221911,-13|-51|0x2c2211,-53|-51|0xc4c491,-68|-59|0xcca96c,-52|-60|0x47472e,-29|-60|0x221e11,-4|-60|0x222211,-6|2|0x742b18,-14|-10|0x493511,53|10|0x2cb2e5",
+		85, 0, 1, 0)
+	if x > -1 then
+		sysLog("Guild Battle Ability")
+		tap(x, y)
+		ramdomSleep(500)
+		tap(225, 765)
+	end
 	-- Guild Battle Detect
 	x, y = findColor({212, 1195, 507, 1256},
 		"0|0|0x0088aa,-2|19|0x00d2ee,-2|37|0x00eeff,50|11|0x7bf2ff,56|32|0x88faff,80|45|0xffffff,99|7|0x003366,132|24|0x99ffff,158|34|0xccffff,173|11|0x00598d,207|24|0x00ddee,217|29|0x00eeff",
@@ -126,16 +136,6 @@ while true do
 		tap(x, y)
 		ramdomSleep(200)
 		tap(x, y)
-	end
-	-- Guild Battle Ability
-	x, y = findColor({554, 1149, 708, 1275},
-		"0|0|0x3b5049,5|-8|0xb0aca2,-21|-10|0x1e7bbc,-54|-5|0x2189c7,-62|2|0x269cd5,-24|8|0x2aace1,21|8|0x2aace1,44|-8|0x1f80c0,62|-33|0x0d3c8e,13|-51|0x221911,-13|-51|0x2c2211,-53|-51|0xc4c491,-68|-59|0xcca96c,-52|-60|0x47472e,-29|-60|0x221e11,-4|-60|0x222211,-6|2|0x742b18,-14|-10|0x493511,53|10|0x2cb2e5",
-		85, 0, 1, 0)
-	if x > -1 then
-		sysLog("Guild Battle Ability")
-		tap(x, y)
-		ramdomSleep(500)
-		tap(225, 765)
 	end
 	-- PVP Detect
 	x, y = findColor({8, 932, 708, 998},
