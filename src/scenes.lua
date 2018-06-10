@@ -239,7 +239,7 @@ function multiplay()
 	sysLog("Multiplay")
 	-- Find anyone OK & no prefer
 	while true do
-		ramdomSleep(5000)
+		ramdomSleep(4000)
 		tap(674, 1101)
 		ramdomSleep(1000)
 		xEvent1, yEvent1 = findColor({71, 215, 625, 928},
@@ -289,7 +289,7 @@ end
 
 function room()
 	sysLog("Room")
-	ramdomSleep(2000)
+	ramdomSleep(1500)
 	-- Difficult detect
 	x, y = findColor({82, 147, 226, 193},
 		"0|0|0xfa7869,0|15|0xfa7869,16|0|0xfa7869,22|1|0xf57668,29|13|0xfa7869,41|9|0xf77768,54|17|0xfa7869,58|20|0xfa7869,75|11|0xf77768,85|14|0xf77768,89|14|0xf87768,99|3|0xfa7869,108|6|0xf97869,131|11|0xea7365",
