@@ -148,9 +148,9 @@ function battle(auto)
 				xZombie, y = findColor({192, 1061, 534, 1191},
 					"0|0|0x5d1700,1|41|0xd89016,15|83|0xcec3ad,67|-7|0xdfd6c6,67|28|0xffd7ad,72|69|0xe5282b,136|7|0xf8edd9,136|35|0x736957,146|71|0xcb4642,234|5|0xfece2c,207|47|0x3d363b,232|69|0x3a3128",
 					85, 0, 0, 0)
-				--xMonokuma, y = findColor({213, 1060, 518, 1186},
-				--	"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
-				--	85, 0, 0, 0)
+				xMonokuma, y = findColor({213, 1060, 518, 1186},
+					"0|0|0x545b6b,0|21|0x837280,5|76|0xdccff2,37|7|0x64505e,42|32|0x3e2444,57|67|0xfac8c0,96|1|0x5f4e5f,94|32|0xf0d4c9,97|64|0xf7d7cd,155|0|0xdddea4,153|31|0xd3ae77,152|61|0xffeee1,207|9|0x97858b,195|40|0xc09c7b,207|68|0xe5c779",
+					85, 0, 0, 0)
 				xErebowa, y = findColor({153, 1071, 564, 1188},
 					"0|0|0xcaccbf,15|12|0x3b2933,33|38|0x4c393f,56|55|0xd3f7f6,79|-15|0x2f589a,124|17|0x2f1b3e,158|39|0xf6ccbd,198|48|0x604b5b,210|-15|0x2e4b98,279|13|0xe5e5e7,318|33|0xcb5662,345|52|0x431229,315|58|0xc25363,346|14|0x9a806f,210|18|0x90caca,252|38|0xc0ffff,163|27|0xf7cfc0,129|28|0x8fdadb",
 					85, 0, 0, 0)
@@ -168,12 +168,12 @@ function battle(auto)
 				elseif xZombie > -1 then
 					tap(363, 1139)
 					mSleep(2100 - detectDelay)
-					--elseif xMonokuma > -1 then
-					--	tap(363, 1139)
-					--	mSleep(2250 - detectDelay)
+				elseif xMonokuma > -1 then
+					tap(363, 1139)
+					mSleep(2250 - detectDelay)
 				elseif xErebowa > -1 then
 					tap(363, 1139)
-					mSleep(1104 - detectDelay)
+					mSleep(1080 - detectDelay)
 					--elseif xRuruna > -1 then
 					--	tap(363, 1139)
 					--	mSleep(1674 - detectDelay)
