@@ -258,6 +258,13 @@ function multiplay()
 			tap(xSpiralCave, ySpiralCave)
 			break
 		end
+		xGoldRelics, yGoldRelics = findColor({73, 217, 294, 988},
+			"0|0|0xffee6a,13|-1|0xf2dd44,1|-8|0xffda72,25|-9|0xffffff,31|-5|0xe5e4e2,46|-4|0xb2aca7,58|-2|0xe1dfdd,68|6|0xd1ceb0,64|-8|0x382a1b,74|-8|0xffffdd,106|1|0xcdc9c6,123|3|0xc9c6c2,136|5|0x827970,108|-6|0xe9e7e6,124|-7|0x5b4f44,133|-8|0xf3f2f1,144|-8|0xffffdd,141|4|0xf3f2f1,117|4|0x3d2f21,54|0|0x928b83",
+			70, 0, 0, 0)
+		if xGoldRelics > -1 then
+			tap(xGoldRelics, yGoldRelics)
+			break
+		end
 		xStarter, yStarter = findColor({143, 206, 645, 928},
 			"0|0|0x98dcff,3|6|0x124a6c,17|8|0x61b1df,26|11|0x52b0e3,44|6|0x3b96ce,78|7|0x216082,105|5|0x003355,209|-2|0x999279,213|1|0xfcfbda,219|10|0x9b947b,209|7|0x887f68,224|8|0x493c2a,231|11|0x7c735d,234|0|0xc0bca0,225|3|0x2d1e0f,436|4|0xffffdd,374|5|0xffffdd,390|4|0xffffdd,400|5|0xffffdd,425|5|0xffffdd",
 			70, 0, 0, 0)
