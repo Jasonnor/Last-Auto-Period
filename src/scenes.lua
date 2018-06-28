@@ -307,6 +307,14 @@ end
 function multiplayBattle()
 	sysLog("Multiplay Battle")
 	while true do
+		-- Disconnect detect
+		xDisconnect, yDisconnect = findColor({144, 562, 585, 808},
+			"0|0|0x2c1f10,-60|0|0x003333,55|0|0x003333,-168|-159|0x2e1f10,-144|-159|0xffffdd,-98|-155|0x7d745d,-68|-155|0x827962,-37|-153|0x302212,16|-153|0x312213,57|-153|0xffffdd,107|-153|0xffffdd,147|-153|0xffffdd,170|-153|0xe4e2c2,-19|-205|0xffffdd,-12|-103|0xffffdd",
+			85, 0, 0, 0)
+		if xDisconnect > -1 then
+			tap(xDisconnect, yDisconnect)
+			break
+		end
 		-- Quest Clear detect
 		x, y = findColor({116, 383, 583, 484},
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
