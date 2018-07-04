@@ -145,11 +145,9 @@ while true do
 		battle('pvp')
 	end
 	-- Event OK
-	x, y = findColor({201, 965, 520, 1063},
-		"0|0|0x2d1e0f,-131|-10|0x125634,-112|3|0x003333,-63|17|0x006644,-30|-11|0x216544,-16|-5|0xffffff,13|3|0x2f2011,57|19|0x006f44,1|12|0x81786f,127|-20|0x3c3308,128|1|0x002822,135|15|0xdd8800,101|32|0x227654,-86|36|0xffcb49,-62|9|0x004433,70|20|0x007744,-144|-23|0xffdd73",
-		90, 0, 0, 0)
-	if x > -1 then
-		sysLog("Event OK")
-		tap(x, y)
-	end
+	--x, y = findColor({201, 965, 520, 1063},-
+	--if x > -1 then
+	--	sysLog("Event OK")
+	--	tap(x, y)
+	--end
 end
