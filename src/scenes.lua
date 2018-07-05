@@ -261,7 +261,7 @@ function multiplay()
 		tap(674, 1101)
 		ramdomSleep(1000)
 		xEvent, yEvent = findColor({66, 215, 338, 932},
-			"0|0|0xffffff,8|4|0xf8f7f7,19|5|0x7e735e,27|-4|0xffffff,10|-8|0xfff1dd,10|-1|0xffffff,2|8|0xedecea,7|-2|0x948d74,5|5|0x584c40,59|93|0xeeb5b1,93|102|0xc89991,135|101|0x8a2413,212|104|0x342616,221|102|0x342616,240|105|0xaaa48a,256|105|0x2d1e0f,274|103|0xffffdd,287|103|0x2d1e0f,449|101|0xffffdd,481|104|0xffffdd",
+			"0|0|0x685d53,5|5|0xf9f9f8,13|15|0x403222,21|9|0xc6c1a5,24|1|0xd7d5d2,29|-5|0xffeed4,33|0|0x332416,29|12|0x695e53,24|10|0x8a816b,64|98|0x882211,84|101|0x882211,104|103|0x882211,120|103|0xee9a96,173|104|0xee9893,453|111|0xffffdd,479|112|0xffffdd,499|113|0xffffdd,21|16|0x989189,17|9|0xffffdd,17|2|0x4b3e2f",
 			70, 0, 0, 0)
 		if xEvent > -1 then
 			tap(xEvent, yEvent)
