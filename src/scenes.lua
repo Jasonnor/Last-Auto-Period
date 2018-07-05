@@ -197,7 +197,7 @@ end
 
 function battleResult()
 	sysLog("Battle Result")
-	for i = 1, 8, 1 do
+	for i = 1, 5, 1 do
 		tap(125, 273)
 		ramdomSleep(300)
 	end
@@ -227,6 +227,17 @@ function battleResult()
 		ramdomSleep(1000)
 	end
 	-- Event OK
+	for i = 1, 3, 1 do
+		tap(125, 273)
+		ramdomSleep(300)
+	end
+	x, y = findColor({1, 299, 724, 1097},
+		"0|0|0x226a44,-1|9|0x003322,-1|23|0x005544,10|-2|0x227755,14|15|0xa8a19b,14|25|0xcdc9c6,17|-3|0x318655,28|12|0xffffff,50|22|0x847c73,48|4|0xada8a2,52|10|0x003322,63|22|0x004933,55|13|0x003333,25|16|0x72685e,6|15|0x004433,44|8|0xe9e7e6",
+		75, 0, 0, 0)
+	if x > -1 then
+		tap(x, y)
+		ramdomSleep(1000)
+	end
 	--ramdomSleep(1500)
 	--x, y = findColor({201, 965, 520, 1063}
 	--if x > -1 then
@@ -249,6 +260,13 @@ function multiplay()
 		ramdomSleep(4000)
 		tap(674, 1101)
 		ramdomSleep(1000)
+		xEvent, yEvent = findColor({66, 215, 338, 932},
+			"0|0|0xffffff,8|4|0xf8f7f7,19|5|0x7e735e,27|-4|0xffffff,10|-8|0xfff1dd,10|-1|0xffffff,2|8|0xedecea,7|-2|0x948d74,5|5|0x584c40,59|93|0xeeb5b1,93|102|0xc89991,135|101|0x8a2413,212|104|0x342616,221|102|0x342616,240|105|0xaaa48a,256|105|0x2d1e0f,274|103|0xffffdd,287|103|0x2d1e0f,449|101|0xffffdd,481|104|0xffffdd",
+			70, 0, 0, 0)
+		if xEvent > -1 then
+			tap(xEvent, yEvent)
+			break
+		end
 		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986},
 			"0|0|0x4a3e2c,12|11|0x857d66,20|12|0xfbfbd9,27|0|0xfefefe,39|5|0x6c6257,52|1|0x938b84,37|10|0xcbc7aa,61|4|0xfbfbd9,67|11|0xfdfcdb,76|9|0xd7d3b5,88|8|0xd3cfb2,87|-2|0xffffff,94|-2|0xa59e84,113|12|0xffffdd,128|16|0xcecbc7,139|17|0xa39c96,141|10|0xffffff,149|5|0xffffff,160|4|0xcac7c3,154|8|0xaca6a0",
 			70, 0, 0, 0)
@@ -316,13 +334,13 @@ function multiplayBattle()
 		-- Quest Clear detect
 		x, y = findColor({116, 383, 583, 484},
 			"0|0|0xf89900,-1|48|0xffff88,34|12|0xee7700,38|42|0xa25500,96|4|0xffaa00,131|34|0xffff44,186|3|0xffca25,216|53|0xffff77,287|6|0xffaa00,317|41|0xfff94f,387|22|0xee7700,381|54|0xffff77,389|55|0x995500,104|25|0x7b3c08,197|22|0xee7700",
-			80, 0, 0, 0)
+			85, 0, 0, 0)
 		xResult, y = findColor({67, 215, 415, 408},
 			"0|0|0xd8c647,31|1|0xbfac3f,73|4|0xe4cb40,88|11|0xf4cc2e,105|11|0xe0bb2c,158|69|0xf9e044,215|40|0xffffff,322|76|0xfad330,83|164|0xfce244,12|166|0xd0b436,98|176|0xf9c51f,107|160|0xa49239,178|63|0xfdf158",
-			80, 0, 0, 0)
+			85, 0, 0, 0)
 		xGameover, y = findColor({19, 337, 681, 443},
 			"0|0|0x3355ff,-31|13|0x3377ff,8|45|0x66ccff,66|6|0x3355ff,51|37|0x55aaff,50|49|0x66ccff,83|46|0x66ccff,124|10|0x3366ff,133|33|0x55a6ff,171|1|0x3355ff,208|29|0x4499ff,228|34|0x55aaff,321|27|0x4499ff,410|28|0x4499ff,445|28|0x4499ff,494|32|0x5599ff,568|30|0x5599ff",
-			80, 0, 0, 0)
+			85, 0, 0, 0)
 		if x > -1 or xResult > -1 or xGameover > -1 then
 			sysLog("Quest Clear")
 			-- Send sticker
