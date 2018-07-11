@@ -63,6 +63,13 @@ while true do
 		multiplay()
 		ramdomSleep(1000)
 	end
+	x, y = findColor({13, 142, 714, 515},
+		"0|0|0x253137,96|0|0x253137,238|5|0xfcfcfc,306|5|0xf5f6f6,385|5|0xc0c5c5,427|5|0x2b393a,521|5|0x263236,616|5|0x28383f,641|93|0x61bac0,513|99|0x336e86,257|100|0x60b5bc,60|99|0x3a7e92,58|243|0x2d658d,282|239|0xc1e5ed,521|252|0x2e6c98,202|-3|0xdfe0e1,229|8|0xc1c5c6,262|5|0xcdd1d1,347|3|0xeceded,402|3|0x9ca4a4",
+		80, 0, 0, 0)
+	if x > -1 then
+		multiplay()
+		ramdomSleep(1000)
+	end
 	-- Empty Room
 	x, y = findColor({139, 578, 592, 812},
 		"0|0|0x2a2011,-75|3|0x003333,56|9|0x004433,-197|-156|0xcecaad,-172|-155|0xfbfbd9,-123|-156|0xffffdd,-46|-149|0xffffdd,29|-149|0xffffdd,121|-149|0xffffdd,154|-160|0x706550,-44|-3|0x003325",
