@@ -227,17 +227,6 @@ function battleResult()
 		ramdomSleep(1000)
 	end
 	-- Event OK
-	for i = 1, 3, 1 do
-		tap(125, 273)
-		ramdomSleep(300)
-	end
-	x, y = findColor({1, 299, 724, 1097},
-		"0|0|0x226a44,-1|9|0x003322,-1|23|0x005544,10|-2|0x227755,14|15|0xa8a19b,14|25|0xcdc9c6,17|-3|0x318655,28|12|0xffffff,50|22|0x847c73,48|4|0xada8a2,52|10|0x003322,63|22|0x004933,55|13|0x003333,25|16|0x72685e,6|15|0x004433,44|8|0xe9e7e6",
-		75, 0, 0, 0)
-	if x > -1 then
-		tap(x, y)
-		ramdomSleep(1000)
-	end
 	--ramdomSleep(1500)
 	--x, y = findColor({201, 965, 520, 1063}
 	--if x > -1 then
@@ -260,9 +249,9 @@ function multiplay()
 		ramdomSleep(4000)
 		tap(674, 1101)
 		ramdomSleep(1000)
-		xEvent, yEvent = findColor({66, 215, 338, 932},
-			"0|0|0x685d53,5|5|0xf9f9f8,13|15|0x403222,21|9|0xc6c1a5,24|1|0xd7d5d2,29|-5|0xffeed4,33|0|0x332416,29|12|0x695e53,24|10|0x8a816b,64|98|0x882211,84|101|0x882211,104|103|0x882211,120|103|0xee9a96,173|104|0xee9893,453|111|0xffffdd,479|112|0xffffdd,499|113|0xffffdd,21|16|0x989189,17|9|0xffffdd,17|2|0x4b3e2f",
-			70, 0, 0, 0)
+		xEvent, yEvent = findColor({66, 214, 429, 985},
+			"0|0|0x5a89e5,3|9|0x55bbff,22|3|0xffffff,42|6|0xfefedc,67|6|0xe0ddbe,124|6|0xffffff,161|6|0x473a2d,202|4|0xffffdd,226|4|0xd0cdc9,93|104|0xfca5a5,200|113|0x882211,184|103|0x882211,478|106|0xffffdd,517|102|0xffffdd,224|2|0xf5f4f4,207|11|0xcecbc7,195|7|0x524735,170|11|0xc4c0a3,159|-1|0x968f87,140|12|0xc0bcb7",
+			80, 0, 0, 0)
 		if xEvent > -1 then
 			tap(xEvent, yEvent)
 			break
