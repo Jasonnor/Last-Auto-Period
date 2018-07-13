@@ -246,12 +246,12 @@ function multiplay()
 	sysLog("Multiplay")
 	-- Find anyone OK & no prefer
 	while true do
-		ramdomSleep(4000)
+		ramdomSleep(2000)
 		tap(674, 1101)
 		ramdomSleep(1000)
 		xEvent, yEvent = findColor({66, 214, 429, 985},
 			"0|0|0x5a89e5,3|9|0x55bbff,22|3|0xffffff,42|6|0xfefedc,67|6|0xe0ddbe,124|6|0xffffff,161|6|0x473a2d,202|4|0xffffdd,226|4|0xd0cdc9,93|104|0xfca5a5,200|113|0x882211,184|103|0x882211,478|106|0xffffdd,517|102|0xffffdd,224|2|0xf5f4f4,207|11|0xcecbc7,195|7|0x524735,170|11|0xc4c0a3,159|-1|0x968f87,140|12|0xc0bcb7",
-			80, 0, 0, 0)
+			70, 0, 0, 0)
 		if xEvent > -1 then
 			tap(xEvent, yEvent)
 			break
