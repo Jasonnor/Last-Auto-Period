@@ -112,11 +112,11 @@ function battle(auto)
 		end
 		-- Auto detect
 		if auto == true or auto == 'guild' then
-			x, y = findColor({615, 68, 715, 124},
-				"0|0|0xffeebb,0|11|0xaa8822,4|27|0xeee48f,83|1|0xffff66,27|1|0xffeeaa,33|-11|0xeecc71,44|-7|0xffeec9,45|2|0xd6d6d6,62|13|0xffffff,75|16|0xbb992d,75|-6|0xffeebb,62|16|0xb2b2b2,70|31|0xf7d632",
-				80, 0, 0, 0)
-			if x <= -1 then
-				tap(667, 93)
+			x, y = findColor({504, 53, 622, 134},
+				"0|0|0xffeebb,23|1|0xffeeb2,45|-2|0xffeebb,60|2|0xffeeaa,35|12|0x190c00,3|20|0xccb13a,35|27|0xeeeea4,62|26|0xeadd77,71|14|0xaa8822,70|-1|0xffeebb",
+				85, 0, 0, 0)
+			if x > -1 then
+				tap(671, 90)
 			end
 		else
 			-- Attack
