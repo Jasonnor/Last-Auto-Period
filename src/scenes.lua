@@ -249,11 +249,25 @@ function multiplay()
 		ramdomSleep(2000)
 		tap(674, 1101)
 		ramdomSleep(1000)
-		xEvent, yEvent = findColor({66, 214, 429, 985},
-			"0|0|0x5a89e5,3|9|0x55bbff,22|3|0xffffff,42|6|0xfefedc,67|6|0xe0ddbe,124|6|0xffffff,161|6|0x473a2d,202|4|0xffffdd,226|4|0xd0cdc9,93|104|0xfca5a5,200|113|0x882211,184|103|0x882211,478|106|0xffffdd,517|102|0xffffdd,224|2|0xf5f4f4,207|11|0xcecbc7,195|7|0x524735,170|11|0xc4c0a3,159|-1|0x968f87,140|12|0xc0bcb7",
+		xUltimate, yUltimate = findColor({155, 308, 648, 919},
+			"0|0|0x882211,25|2|0x882211,63|4|0xa03b2b,139|0|0x716651,150|11|0xc9c6a8,219|3|0x483b2a,220|3|0xb6b095,223|12|0x352717,331|-1|0x4d402f,334|4|0x7d745d,337|11|0x322314,335|14|0xcecbad,373|4|0xffffdd,391|8|0xffffdd,421|6|0xffffdd,66|11|0x8b2817,-2|8|0xfb8985,161|3|0xedeccb,167|3|0xb2ad92,182|1|0x2f2011",
 			70, 0, 0, 0)
-		if xEvent > -1 then
-			tap(xEvent, yEvent)
+		if xUltimate > -1 then
+			tap(xUltimate, yUltimate)
+			break
+		end
+		xExpert, yExpert = findColor({143, 206, 645, 928},
+			"0|0|0xf2ca62,5|9|0x664400,18|8|0x664400,32|16|0xa8730c,55|16|0xfaa51d,72|7|0xffcc54,93|10|0xf0ac26,102|5|0x664400,210|0|0x2e1f10,212|1|0xf7f6d5,214|3|0xffffdd,217|10|0x312213,226|9|0x2d1e0f,230|9|0xeae9c9,231|3|0x605541,231|-4|0xffffdd,391|3|0xffffdd,404|6|0xffffdd,422|6|0xffffdd,437|6|0xffffdd",
+			70, 0, 0, 0)
+		if xExpert > -1 then
+			tap(xExpert, yExpert)
+			break
+		end
+		xStarter, yStarter = findColor({143, 206, 645, 928},
+			"0|0|0x98dcff,3|6|0x124a6c,17|8|0x61b1df,26|11|0x52b0e3,44|6|0x3b96ce,78|7|0x216082,105|5|0x003355,209|-2|0x999279,213|1|0xfcfbda,219|10|0x9b947b,209|7|0x887f68,224|8|0x493c2a,231|11|0x7c735d,234|0|0xc0bca0,225|3|0x2d1e0f,436|4|0xffffdd,374|5|0xffffdd,390|4|0xffffdd,400|5|0xffffdd,425|5|0xffffdd",
+			70, 0, 0, 0)
+		if xStarter > -1 then
+			tap(xStarter, yStarter)
 			break
 		end
 		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986},
@@ -268,20 +282,6 @@ function multiplay()
 			70, 0, 0, 0)
 		if xGoldRelics > -1 then
 			tap(xGoldRelics, yGoldRelics)
-			break
-		end
-		xStarter, yStarter = findColor({143, 206, 645, 928},
-			"0|0|0x98dcff,3|6|0x124a6c,17|8|0x61b1df,26|11|0x52b0e3,44|6|0x3b96ce,78|7|0x216082,105|5|0x003355,209|-2|0x999279,213|1|0xfcfbda,219|10|0x9b947b,209|7|0x887f68,224|8|0x493c2a,231|11|0x7c735d,234|0|0xc0bca0,225|3|0x2d1e0f,436|4|0xffffdd,374|5|0xffffdd,390|4|0xffffdd,400|5|0xffffdd,425|5|0xffffdd",
-			70, 0, 0, 0)
-		if xStarter > -1 then
-			tap(xStarter, yStarter)
-			break
-		end
-		xExpert, yExpert = findColor({143, 206, 645, 928},
-			"0|0|0xf2ca62,5|9|0x664400,18|8|0x664400,32|16|0xa8730c,55|16|0xfaa51d,72|7|0xffcc54,93|10|0xf0ac26,102|5|0x664400,210|0|0x2e1f10,212|1|0xf7f6d5,214|3|0xffffdd,217|10|0x312213,226|9|0x2d1e0f,230|9|0xeae9c9,231|3|0x605541,231|-4|0xffffdd,391|3|0xffffdd,404|6|0xffffdd,422|6|0xffffdd,437|6|0xffffdd",
-			70, 0, 0, 0)
-		if xExpert > -1 then
-			tap(xExpert, yExpert)
 			break
 		end
 	end
