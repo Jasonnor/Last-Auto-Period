@@ -6,7 +6,7 @@ function helperSelect(helper)
 		ramdomSleep(1000)
 		x, y = findColor({399, 287, 681, 1207},
 			"0|0|0x6ee197,19|6|0x22ee88,36|-3|0x184c2c,47|3|0x165b3e,57|-3|0xcbffaa,63|-1|0xa4fea9,82|-3|0xffee22,86|9|0xffd422,104|3|0x221100,118|0|0xffff55,139|5|0xeeaa00,151|7|0x331b00,168|1|0xedd33b,180|10|0xffeb22",
-			85, 0, 0, 0)
+			80, 0, 0, 0)
 		if x > -1 then
 			tap(x, y)
 		else
@@ -14,7 +14,7 @@ function helperSelect(helper)
 			ramdomSleep(1000)
 			x, y = findColor({399, 287, 681, 1207},
 				"0|0|0x6ee197,19|6|0x22ee88,36|-3|0x184c2c,47|3|0x165b3e,57|-3|0xcbffaa,63|-1|0xa4fea9,82|-3|0xffee22,86|9|0xffd422,104|3|0x221100,118|0|0xffff55,139|5|0xeeaa00,151|7|0x331b00,168|1|0xedd33b,180|10|0xffeb22",
-				85, 0, 0, 0)
+				80, 0, 0, 0)
 			if x > -1 then
 				tap(x, y)
 			else
@@ -227,12 +227,14 @@ function battleResult()
 		ramdomSleep(1000)
 	end
 	-- Event OK
-	--ramdomSleep(1500)
-	--x, y = findColor({201, 965, 520, 1063}
-	--if x > -1 then
-	--	tap(x, y)
-	--	ramdomSleep(1000)
-	--end
+	ramdomSleep(1500)
+	x, y = findColor({23, 953, 699, 1071},
+		"0|0|0x52b777,82|26|0x282213,112|25|0xf8f7f7,154|25|0x004433,184|18|0x00332f,244|20|0xffdd40,233|55|0xffbb22,156|45|0x1ba363,35|36|0x006644,117|18|0xffffff",
+		85, 0, 0, 0)
+	if x > -1 then
+		tap(x, y)
+		ramdomSleep(1000)
+	end
 	-- OK bottom
 	x, y = findColor({373, 1166, 691, 1258},
 		"0|0|0x867f76,-107|-17|0x227752,93|1|0x004433,-82|18|0x058855,141|22|0xeeaa11,-135|-28|0xc49444,-137|31|0xfcb720,127|-28|0xa47c35,125|29|0x835107",
@@ -359,11 +361,11 @@ function multiplayBattle()
 			-- Skill detect
 			xSkill, y = findColor({597, 1224, 709, 1264},
 				"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
-				80, 0, 0, 0)
+				75, 0, 0, 0)
 			-- Character Attack detect
 			xIona, y = findColor({186, 1069, 538, 1185},
 				"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
-				85, 0, 0, 0)
+				80, 0, 0, 0)
 			if xSkill > -1 then
 				tap(664, 1188)
 				nextSleep = 3513 - detectDelay
