@@ -335,10 +335,12 @@ function multiplayBattle()
 		if x > -1 or xResult > -1 or xGameover > -1 then
 			sysLog("Quest Clear")
 			-- Send sticker
-			tap(663, 894)
-			ramdomSleep(500)
-			tap(487, 783)
-			ramdomSleep(1000)
+			if (xGameover <= -1) then
+				tap(663, 894)
+				ramdomSleep(500)
+				tap(487, 783)
+				ramdomSleep(1000)
+			end
 			tap(350, 530)
 			break
 		end
