@@ -87,6 +87,15 @@ function battle(auto)
 			tap(x, y)
 			break
 		end
+		xError, yError = findColor({249, 724, 474, 811},
+			"0|0|0x003322,50|8|0x163121,77|10|0x70655b,107|14|0x005144,138|14|0x004433,174|7|0xffdd44,-32|11|0xdd8800",
+			85, 0, 0, 0)
+		if xError > -1 then
+			sysLog("Connect Failed")
+			ramdomSleep(500)
+			tap(xError, yError)
+			break
+		end
 		if auto == 'guild' then
 			-- Guild Battle Clear
 			x, y = findColor({76, 373, 643, 489},
@@ -342,6 +351,15 @@ function multiplayBattle()
 				ramdomSleep(1000)
 			end
 			tap(350, 530)
+			break
+		end
+		xError, yError = findColor({249, 724, 474, 811},
+			"0|0|0x003322,50|8|0x163121,77|10|0x70655b,107|14|0x005144,138|14|0x004433,174|7|0xffdd44,-32|11|0xdd8800",
+			85, 0, 0, 0)
+		if xError > -1 then
+			sysLog("Connect Failed")
+			ramdomSleep(500)
+			tap(xError, yError)
 			break
 		end
 		detectDelay = 100
