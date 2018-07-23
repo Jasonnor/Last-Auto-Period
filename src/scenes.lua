@@ -348,8 +348,8 @@ function multiplayBattle()
 				tap(663, 894)
 				ramdomSleep(500)
 				tap(487, 783)
-				ramdomSleep(1000)
 			end
+			ramdomSleep(1000)
 			tap(350, 530)
 			break
 		end
