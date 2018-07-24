@@ -16,6 +16,7 @@ if flag == 0 then
 	sysLog("Open Last Period ...")
 	runApp("jp.co.happyelements.mirror")
 end
+loadingCounter = 0
 -- Game
 while true do
 	ramdomSleep(1000)
@@ -25,6 +26,21 @@ while true do
 		90, 1, 1, 1)
 	if x > -1 then
 		tap(x, y)
+	end
+	-- Loading Counter
+	if loadingCounter > 10 then
+		sysLog("Loading error, restart Last Period ...")
+		closeApp("jp.co.happyelements.mirror")
+		ramdomSleep(1000)
+		runApp("jp.co.happyelements.mirror")
+	end
+	x, y = findColor({300, 560, 417, 671},
+		"0|0|0x514030,6|0|0x312d21,26|0|0xf6f6f4,42|1|0x273441,66|3|0xffe900,61|25|0xd3a500,39|23|0xffffdf,19|23|0x010101,6|38|0xcac2ba,11|61|0xfea716,32|70|0xb9a779,60|71|0xb6934f,58|65|0xd70e0c,43|66|0x39b6ae,30|63|0xad448a,33|50|0xffff00,49|42|0xffff20,60|46|0xeee08d,43|64|0x9e3b41,34|69|0x201d12",
+		90, 0, 0, 0)
+	if x > -1 then
+		loadingCounter = loadingCounter + 1
+	else
+		loadingCounter = 0
 	end
 	-- Helper Detect
 	x, y = findColor({33, 150, 689, 194},
