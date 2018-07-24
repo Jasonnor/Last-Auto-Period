@@ -28,7 +28,7 @@ while true do
 		tap(x, y)
 	end
 	-- Loading Counter
-	if loadingCounter > 10 then
+	if loadingCounter > 30 then
 		sysLog("Loading error, restart Last Period ...")
 		closeApp("jp.co.happyelements.mirror")
 		ramdomSleep(1000)
