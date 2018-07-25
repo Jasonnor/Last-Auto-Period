@@ -146,7 +146,7 @@ function battle(auto)
 				-- Skill detect
 				x, y = findColor({597, 1224, 709, 1264},
 					"0|0|0xddbb88,14|-1|0xcfb67d,37|-2|0xccaa78,55|-1|0xc4a679,66|-1|0xc2aa89,62|10|0x5c594f,48|12|0x4a4a3c,39|11|0x3d3d2e,31|11|0xfeed96,16|11|0x3d312e,4|15|0x5b5547,-7|16|0xdfca9e",
-					80, 0, 0, 0)
+					75, 0, 0, 0)
 				-- Character Attack detect
 				xIona, y = findColor({186, 1069, 538, 1185},
 					"0|0|0xebd1d8,9|34|0xfcdbd0,9|67|0x7f453e,72|-3|0x484355,78|41|0xf9c9ba,92|68|0xffe7d3,154|11|0x734c4f,150|49|0xb06754,152|70|0xb06152,244|19|0x5ea3d9,240|50|0x756773,236|75|0xe6a275,138|47|0xfdc4ae,71|50|0x603b3e",
@@ -362,8 +362,8 @@ function multiplayBattle()
 			tap(xError, yError)
 			break
 		end
-		detectDelay = 100
-		nextSleep = 1600 - detectDelay
+		detectDelay = 120
+		nextSleep = 1500 - detectDelay
 		-- Attack
 		while true do
 			-- Attack detect
