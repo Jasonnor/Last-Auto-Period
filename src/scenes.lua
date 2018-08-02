@@ -237,7 +237,7 @@ function battleResult()
 	end
 	-- Event OK
 	ramdomSleep(1500)
-	x, y = findColor({23, 953, 699, 1071},
+	x, y = findColor({23, 850, 699, 1071},
 		"0|0|0x52b777,82|26|0x282213,112|25|0xf8f7f7,154|25|0x004433,184|18|0x00332f,244|20|0xffdd40,233|55|0xffbb22,156|45|0x1ba363,35|36|0x006644,117|18|0xffffff",
 		85, 0, 0, 0)
 	if x > -1 then
