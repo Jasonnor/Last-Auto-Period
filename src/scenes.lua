@@ -43,16 +43,16 @@ function helperSelect(helper)
 			if i > 0 and i % 2 == 0 then
 				-- Refresh
 				tap(675, 1238)
-				ramdomSleep(1500)
+				do return end
 			end
 			if i % 2 == 0 then
 				drag(709, 331, 709, 1145)
 			end
 			ramdomSleep(1000)
 			-- Find Guest + MAX アレーティア
-			x, y = findColor({13, 288, 186, 1192},
-				"0|0|0xe675b5,-62|-38|0xffef67,-26|-37|0x593242,-3|-50|0x57516b,15|-53|0x453518,21|-53|0xfff167,35|-56|0x7d6d2a,-52|21|0x9c8b8d,-54|40|0xffc850,-35|47|0xb58c39,-20|42|0x4a2323,1|43|0xecb94a,12|42|0xffc850,20|43|0x84652a,26|19|0x3f3111,-1|14|0xffe3cc,-33|24|0x8f7676",
-				90, 0, 0, 0)
+			x, y = findColor({52, 275, 693, 1188},
+				"0|0|0xef3434,15|0|0xee3133,2|17|0xcf7c14,-5|30|0xf4ae3e,20|29|0xae1615,-80|25|0xf5e998,-74|36|0xc8b447,-60|52|0x902a4c,-51|64|0xa98180,-43|67|0xe8b0aa,-51|75|0xa4376a,-29|85|0xe38e8e,-22|98|0x594145,-22|103|0xf3bf4c,-7|75|0xeab766,-22|113|0x775a26,6|84|0x382914,-7|117|0xc99d3f,-70|68|0xe16c76,-84|79|0xffe966",
+				85, 0, 0, 0)
 			-- Find Guest + MAX Monokuma
 			--x, y = findColor({13, 288, 186, 1192},
 			--	"0|0|0xffe1d7,-25|6|0xddc1c0,-30|-5|0x4c4455,-31|-23|0x868182,-37|-43|0xd5ae37,-53|-38|0xede648,-14|34|0x422f16,-25|37|0xfac44e,16|39|0x392813,37|36|0xffc850,40|-51|0xc69325,46|-63|0x2f1611,31|-71|0xd32533,-4|-33|0x56515e,-4|-40|0x484044,30|-41|0x821e0e,38|-26|0xf47a8d",
@@ -242,7 +242,7 @@ function battleResult()
 		85, 0, 0, 0)
 	if x > -1 then
 		tap(x, y)
-		ramdomSleep(1000)
+		ramdomSleep(500)
 	end
 	-- OK bottom
 	x, y = findColor({373, 1166, 691, 1258},
