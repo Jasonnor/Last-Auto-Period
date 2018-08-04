@@ -260,6 +260,13 @@ function multiplay()
 		ramdomSleep(2000)
 		tap(674, 1101)
 		ramdomSleep(1000)
+		xEventVS, yEventVS = findColor({30, 201, 686, 982},
+			"0|0|0xbeb99d,-1|9|0xffffff,3|16|0xffffff,403|109|0x554836,16|6|0xffffff,28|12|0x3e3123,23|20|0x807760,27|2|0x5b4f43,51|100|0x882211,61|104|0x963d31,96|110|0x882211,138|114|0xf07d79,208|104|0x403222,215|109|0xa9a288,230|104|0x2d1e0f,237|110|0x9e977e,253|111|0x786e59,267|115|0x584c39,290|111|0x5e523f,401|103|0x665b47",
+			70, 0, 0, 0)
+		if xEventVS > -1 then
+			tap(xEventVS, yEventVS)
+			break
+		end
 		xUltimate, yUltimate = findColor({155, 308, 648, 919},
 			"0|0|0x882211,25|2|0x882211,63|4|0xa03b2b,139|0|0x716651,150|11|0xc9c6a8,219|3|0x483b2a,220|3|0xb6b095,223|12|0x352717,331|-1|0x4d402f,334|4|0x7d745d,337|11|0x322314,335|14|0xcecbad,373|4|0xffffdd,391|8|0xffffdd,421|6|0xffffdd,66|11|0x8b2817,-2|8|0xfb8985,161|3|0xedeccb,167|3|0xb2ad92,182|1|0x2f2011",
 			70, 0, 0, 0)
@@ -279,20 +286,6 @@ function multiplay()
 			70, 0, 0, 0)
 		if xStarter > -1 then
 			tap(xStarter, yStarter)
-			break
-		end
-		xSpiralCave, ySpiralCave = findColor({106, 213, 369, 986},
-			"0|0|0x4a3e2c,12|11|0x857d66,20|12|0xfbfbd9,27|0|0xfefefe,39|5|0x6c6257,52|1|0x938b84,37|10|0xcbc7aa,61|4|0xfbfbd9,67|11|0xfdfcdb,76|9|0xd7d3b5,88|8|0xd3cfb2,87|-2|0xffffff,94|-2|0xa59e84,113|12|0xffffdd,128|16|0xcecbc7,139|17|0xa39c96,141|10|0xffffff,149|5|0xffffff,160|4|0xcac7c3,154|8|0xaca6a0",
-			70, 0, 0, 0)
-		if xSpiralCave > -1 then
-			tap(xSpiralCave, ySpiralCave)
-			break
-		end
-		xGoldRelics, yGoldRelics = findColor({73, 217, 294, 988},
-			"0|0|0xffee6a,13|-1|0xf2dd44,1|-8|0xffda72,25|-9|0xffffff,31|-5|0xe5e4e2,46|-4|0xb2aca7,58|-2|0xe1dfdd,68|6|0xd1ceb0,64|-8|0x382a1b,74|-8|0xffffdd,106|1|0xcdc9c6,123|3|0xc9c6c2,136|5|0x827970,108|-6|0xe9e7e6,124|-7|0x5b4f44,133|-8|0xf3f2f1,144|-8|0xffffdd,141|4|0xf3f2f1,117|4|0x3d2f21,54|0|0x928b83",
-			70, 0, 0, 0)
-		if xGoldRelics > -1 then
-			tap(xGoldRelics, yGoldRelics)
 			break
 		end
 	end
